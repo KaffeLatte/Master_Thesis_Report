@@ -1,0 +1,27 @@
+\changetocdepth {2}
+\select@language {english}
+\select@language {english}
+\select@language {swedish}
+\select@language {english}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}
+\contentsline {subsection}{\numberline {1.0.1}What are Recommender Systems?}{1}
+\contentsline {subsection}{\numberline {1.0.2}What is Spotify?}{1}
+\contentsline {subsection}{\numberline {1.0.3}Problem Background}{1}
+\contentsline {subsection}{\numberline {1.0.4}Project Aim}{2}
+\contentsline {subsection}{\numberline {1.0.5}Research Questions}{2}
+\contentsline {subsection}{\numberline {1.0.6}Previous Work}{2}
+\contentsline {subsection}{\numberline {1.0.7}Collaborative Filtering}{2}
+\contentsline {subsection}{\numberline {1.0.8}Content Based Approaches}{3}
+\contentsline {subsection}{\numberline {1.0.9}Related Work}{3}
+\contentsline {chapter}{\chapternumberline {2}Methodology}{5}
+\contentsline {subsection}{\numberline {2.0.10}Assumptions}{5}
+\contentsline {subsection}{\numberline {2.0.11}Data}{5}
+\contentsline {subsection}{\numberline {2.0.12}Data Preprocessing}{5}
+\contentsline {subsection}{\numberline {2.0.13}Exploratory Data Analysis}{5}
+\contentsline {subsection}{\numberline {2.0.14}Playlist Characteristics}{6}
+\contentsline {subsection}{\numberline {2.0.15}Handling zero variance terms}{6}
+\contentsline {subsection}{\numberline {2.0.16}Selecting candidate songs for a playlist context}{6}
+\contentsline {subsection}{\numberline {2.0.17}First Track Manifold}{8}
+\contentsline {subsection}{\numberline {2.0.18}Playlist Comparison}{8}
+\contentsline {chapter}{Appendices}{9}
+\contentsline {appendix}{\chapternumberline {A}RDF}{11}

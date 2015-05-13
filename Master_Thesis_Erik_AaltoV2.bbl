@@ -1,0 +1,62 @@
+\begin{thebibliography}{10}
+
+\bibitem{adomavicius2005toward}
+Gediminas Adomavicius and Alexander Tuzhilin.
+\newblock Toward the next generation of recommender systems: A survey of the
+  state-of-the-art and possible extensions.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  17(6):734--749, 2005.
+
+\bibitem{cortes1995support}
+Corinna Cortes and Vladimir Vapnik.
+\newblock Support-vector networks.
+\newblock {\em Machine learning}, 20(3):273--297, 1995.
+
+\bibitem{herlocker2004evaluating}
+Jonathan~L Herlocker, Joseph~A Konstan, Loren~G Terveen, and John~T Riedl.
+\newblock Evaluating collaborative filtering recommender systems.
+\newblock {\em ACM Transactions on Information Systems (TOIS)}, 22(1):5--53,
+  2004.
+
+\bibitem{hsu2002comparison}
+Chih-Wei Hsu and Chih-Jen Lin.
+\newblock A comparison of methods for multiclass support vector machines.
+\newblock {\em Neural Networks, IEEE Transactions on}, 13(2):415--425, 2002.
+
+\bibitem{hu2008collaborative}
+Yifan Hu, Yehuda Koren, and Chris Volinsky.
+\newblock Collaborative filtering for implicit feedback datasets.
+\newblock In {\em Data Mining, 2008. ICDM'08. Eighth IEEE International
+  Conference on}, pages 263--272. IEEE, 2008.
+
+\bibitem{melville2002content}
+Prem Melville, Raymond~J Mooney, and Ramadass Nagarajan.
+\newblock Content-boosted collaborative filtering for improved recommendations.
+\newblock In {\em AAAI/IAAI}, pages 187--192, 2002.
+
+\bibitem{platt2001learning}
+John~C Platt, Christopher~JC Burges, Steven Swenson, Christopher Weare, and
+  Alice Zheng.
+\newblock Learning a gaussian process prior for automatically generating music
+  playlists.
+\newblock In {\em NIPS}, pages 1425--1432, 2001.
+
+\bibitem{ragno2005inferring}
+Robert Ragno, Christopher~JC Burges, and Cormac Herley.
+\newblock Inferring similarity between music objects with application to
+  playlist generation.
+\newblock In {\em Proceedings of the 7th ACM SIGMM international workshop on
+  Multimedia information retrieval}, pages 73--80. ACM, 2005.
+
+\bibitem{sarwar2001item}
+Badrul Sarwar, George Karypis, Joseph Konstan, and John Riedl.
+\newblock Item-based collaborative filtering recommendation algorithms.
+\newblock In {\em Proceedings of the 10th international conference on World
+  Wide Web}, pages 285--295. ACM, 2001.
+
+\bibitem{su2009survey}
+Xiaoyuan Su and Taghi~M Khoshgoftaar.
+\newblock A survey of collaborative filtering techniques.
+\newblock {\em Advances in artificial intelligence}, 2009:4, 2009.
+
+\end{thebibliography}
