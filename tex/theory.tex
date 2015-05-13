@@ -1,0 +1,68 @@
+\chapter{Computational Complexity}
+Here goes an introduction to Big-O notation and why it is important in the context of recommendation.
+
+\chapter{Basic Statistics}
+Here goes arithmetic mean, geometric mean, variance, standard deviation, covariance, dot product
+
+\chapter{Machine Learning}
+Here goes cosine measure, PCA, LSH, subspace projections, clustering, generative vs discriminative models, curse of dimensionality, factor analysis, possibly some evaluation theory
+
+\chapter{Background}
+
+Previous work within the recommender system domain mainly focuses on two approaches. These are collaborative filtering and content based approaches. A hybrid of these two approaches can also be used. Both collaborative filtering and content based approaches typically try to infer a user ranking for a specific item\cite{melville2002content}. An item would in the context of music recommendation be a song, artist or album.
+
+\section{Collaborative Filtering}
+Collaborative filtering focuses on user's past behaviour. From this past behaviour of a specific user and past behaviour of similar users the ranking for the specific user for a certain item is inferred\cite{sarwar2001item}\cite{su2009survey}. In other words, a user gets recommendations of items that other users with similar taste like\cite{adomavicius2005toward}. Collaborative filtering suffers from something called the cold start problem, which occurs when the ranking for a specific item and user is inferred when there is no or little information of the current user behaviour\cite{herlocker2004evaluating}. Collaborative filtering has the advantage that it only relies on past user behaviour without the need of explicit user profiles. The fact that collaborative filtering only looks at user data means that it is domain free, i.e. the model is not dependent on whether users have rated books, movies, music or a combination thereof\cite{hu2008collaborative}.
+
+Collaborative filtering can be used with explicit user feedback, such as the movie ratings used by Netflix, but it can also be used with implicit user feedback\cite{hu2008collaborative}. In the music context implicit feedback could be whether a song has been played or skipped.
+
+An example of collaborative filtering applied to music recommendation is the recommender system used by last.fm. Collaborative filtering is also part of the music recommendation pipeline used in production at Spotify.
+
+Collaborative filtering methods can be divided into two categories, memory-based and model-based. Memory-based collaborative filtering algorithms can be seen as user based while the model-based algorithms can be seen as item based\cite{sarwar2001item}.
+
+Memory-based collaborative filtering algorithms operate on the entire user-item matrix where the full user history data set is used. The user-item matrix could for example consist of one user per row and one item per column. This data set is used to predict a preference for a previously unseen item for a specific user. To do this the rows most similar to the row corresponding to the specific user are found. The ratings of the users corresponding to these rows for the unseen item are then used to predict the rating for the specific user. As similar user's ratings are used to predict a specific user's rating memory-based models can also be thought of as neighbourhood models\cite{hu2008collaborative}. There are various ways implementing a memory-based model, but a naive way could be to find rows by using the cosine similarity and then simply averaging the rating of the top-n similar users for a specific item. This naive approach has a $O(MN^2)$ complexity where M is the number of users and N the number of items. One downside of this approach is that it does not scale very well when the user-item matrix is large. Another downside is that the user-item matrix is likely to be very sparse and using a nearest neighbour approach in this setting can lead to poor performance\cite{sarwar2001item}\cite{su2009survey}.
+
+Model-based collaborative filtering means that the user history data is used to create a probabilistic model for ratings. At run time the model, rather than the entire user history data set, is used to make predictions of items for users. Model-based approaches are likely to scale better than memory-based ones\cite{sarwar2001item}. One approach to model-based collaborative filtering is to use latent factors. This means that each user would be associated with a user-factors vector $x_u \in R^f$ and each item with an item-factors vector $y_i \in R^f$. The predicted value of a user for an item would then be the inner product between the corresponding user and item vectors, i.e. $\hat{r}_{ui} = x_u^T y_i$. To avoid overfitting the model can be regularized, which means including a bias. A model as follows is then obtained: 
+\begin{equation}
+min_{x_*,y_*} \sum (r_{ui} - x_u^Ty_i)^2 +  \lambda(||x_u||^2 + ||y_i||^2)
+\end{equation}
+
+The problem with equation 5.1 is that it assumes knowledge of explicit feedback. In the context of music recommendation the case is rather that implicit feedback is available than explicit. What can be done in this case is to use binary labels expressing whether a user has preference for an item or not. Having preference for an item could mean that the user has streamed that song and not skipped it for example. Therefore the binary variable $p_{ui}$ is used to describe user preference.
+
+There is however an uncertainty to the preference a user has. Has a user really preference for a song that come on Spotify Radio while the user was in another room? What can be done is to create confidence variables, that could depend on the number of times a song has been streamed. What can be done here is to use another variable \[ c_{ui} = 1 + \alpha r_{ui} \] where $r_{ui}$ is the number of times user \textit{u} has streamed item \textit{i}.
+
+The resulting model then becomes:
+\begin{equation}
+min_{x_*,y_*} \sum c_{ui}(p_{ui} - x_u^Ty_i)^2 +  \lambda(||x_u||^2 + ||y_i||^2)
+\end{equation}
+
+Problems still remain as users and items can contain bias. The remedy is to enter bias terms, the resulting model is then:
+
+\begin{equation}
+min_{x_*,y_*} \sum c_{ui}(p_{ui} - x_u^Ty_i - b_u - b_i)^2 +  \lambda(||x_u||^2 + ||y_i||^2)
+\end{equation}
+
+Where $b_u$ is the user bias term and $b_i$ is the item bias term.
+
+The resulting problem is a non-convex optimization problem, but by fixing either the user or item vectors the problem becomes convex and can be solved by the use of alternating least squares, where the cost function is guaranteed to get a lower value with each iteration\cite{hu2008collaborative}.
+
+\section{Content Based Approaches}
+Content based approaches for recommender systems recommend items that are similar to items  a user has had preference for in the past. This can be done by either comparing items to items or to create a user profile based on a users preferred items{adomavicius2005toward}. Content based approaches look at discrete features of items and tries to infer a similarity between two items given their similarity of features. A parallel can be drawn between content based recommendation and information retrieval.In the context of content based recommendation the cost function that is minimized is the distance between item.\cite{adomavicius2005toward}.
+
+An example of a content based approach within music recommendation are the recommendations made by online radio station Pandora. 
+
+Downsides with content based recommendation are that a user can never be recommended something that is not similar to what the user has expressed preferences before in the past. Further, content based recommendation is limited to the features of items. If the features used to describe items are poor a content based recommender system is likely to perform poorly. Lastly, content based recommenders do not take sequential information into account. Thus a well written news article is seen identical to the same article written backwards as they contain exactly the same words\cite{adomavicius2005toward}.
+
+\section{Hybrid Systems}
+OLOLOLOL
+
+\chapter{Previous Work}
+\section{Probabilistic Graphical Models for Playlist Generation}
+Earlier attempts of playlist generation has been made by Microsoft Research. Ragno, Burges and Herley has made a model for playlist generation that can take any type of ordered playlist material, such as curated playlists or albums, as training data, and constructs an undirected graph between songs that are within the reach of a nth-order Markov model. In this graph nodes constitute songs and edges get their weights depending on how many times two songs fulfil the nth-order Markov property. Once this is done the undirected graph is converted into a directed graph where edges weight´s, the transition probabilities, are normalized by the sum of outgoing weights from each node. Once the undirected graph is made a playlist can be generated by selecting an initial seed song and simply performing a random walk in the graph. This model assumes that the connectivity between songs does not have to take order into account and that one can prevent playlist drifting by adding higher order Markov properties\cite{ragno2005inferring}. 
+
+From a contextual playlist generation perspective a problem with the approach taken by Rango, Burges and Herley is that if you generate a playlist from a random walk you cannot chose the playlist context for the generated playlist on before hand. Another problem with the probabilistic graphical model approach to playlist generation is that the graph created during training phase only works for songs that are in the training data set. This model is not generalizable so you cannot get a similar playlist to a playlist you like, but with different songs.
+
+\section{Gaussian Processes for Playlist Generation}
+Another approach to playlist generation is to use gaussian processes, this approach has been taken by Platt et al, also at Microsoft Research. Here the authors try to learn a gaussian process prior from training data. This prior is then used together with a set of songs, for which a user has expressed preference, to generate a playlist given an initial seed song. In the training phase a blend of linear kernels is used to learn the relationship of meta data features among songs that come in sequence. The coefficients for each linear kernel is learnt by finding the coefficient that minimizes the difference between the empirical covariance between songs and the value given by the linear kernel. Empirical covariance is in this case as simple as whether the training data songs belong to the same album or not. Once the training phase is done the playlist generation phase consists of predicting the user preference for each song in a set of candidate songs, i.e. the f-star function in this case is the predicted user preference for a song. The f-star value is calculated by weighing the blend of linear kernels between a seed song and each candidate song with a factor. This factor is the sum of similarity between the initial seed song and each user preference song weighted by how central each user preference song is in the preference space. Playlist generation is then done by simply choosing the songs with highest f-star value\cite{platt2001learning}.
+
+This model generalizes to new songs, but the user preference space is seen as one single space. This is a simplification of reality where a user preference space is probably divided into several categories, for example a workout preference space and a chill-out preference space, something the model provided does not take into account, which can be claimed as a weakness in terms of playlist context generation. Neither does the model take the ordering of songs into account.
