@@ -7,10 +7,27 @@ Gediminas Adomavicius and Alexander Tuzhilin.
 \newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
   17(6):734--749, 2005.
 
+\bibitem{bengio2013representation}
+Yoshua Bengio, Aaron Courville, and Pascal Vincent.
+\newblock Representation learning: A review and new perspectives.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 35(8):1798--1828, 2013.
+
 \bibitem{cortes1995support}
 Corinna Cortes and Vladimir Vapnik.
 \newblock Support-vector networks.
 \newblock {\em Machine learning}, 20(3):273--297, 1995.
+
+\bibitem{gunawardana2009unified}
+Asela Gunawardana and Christopher Meek.
+\newblock A unified approach to building hybrid recommender systems.
+\newblock In {\em Proceedings of the third ACM conference on Recommender
+  systems}, pages 117--124. ACM, 2009.
+
+\bibitem{hamel2010learning}
+Philippe Hamel and Douglas Eck.
+\newblock Learning features from music audio with deep belief networks.
+\newblock In {\em ISMIR}, pages 339--344. Utrecht, The Netherlands, 2010.
 
 \bibitem{herlocker2004evaluating}
 Jonathan~L Herlocker, Joseph~A Konstan, Loren~G Terveen, and John~T Riedl.
@@ -29,10 +46,32 @@ Yifan Hu, Yehuda Koren, and Chris Volinsky.
 \newblock In {\em Data Mining, 2008. ICDM'08. Eighth IEEE International
   Conference on}, pages 263--272. IEEE, 2008.
 
+\bibitem{logan2000mel}
+Beth Logan et~al.
+\newblock Mel frequency cepstral coefficients for music modeling.
+\newblock In {\em ISMIR}, 2000.
+
 \bibitem{melville2002content}
 Prem Melville, Raymond~J Mooney, and Ramadass Nagarajan.
 \newblock Content-boosted collaborative filtering for improved recommendations.
 \newblock In {\em AAAI/IAAI}, pages 187--192, 2002.
+
+\bibitem{mulaik1987brief}
+Stanley~A Mulaik.
+\newblock A brief history of the philosophical foundations of exploratory
+  factor analysis.
+\newblock {\em Multivariate Behavioral Research}, 22(3):267--305, 1987.
+
+\bibitem{musicGenome}
+Pandora.
+\newblock The music genome project.
+\newblock Available from: \url{http://pandora.com/mgp} [cited 13:th of May
+  2015].
+
+\bibitem{pazzani2007content}
+Michael~J Pazzani and Daniel Billsus.
+\newblock Content-based recommendation systems.
+\newblock In {\em The adaptive web}, pages 325--341. Springer, 2007.
 
 \bibitem{platt2001learning}
 John~C Platt, Christopher~JC Burges, Steven Swenson, Christopher Weare, and
@@ -58,5 +97,11 @@ Badrul Sarwar, George Karypis, Joseph Konstan, and John Riedl.
 Xiaoyuan Su and Taghi~M Khoshgoftaar.
 \newblock A survey of collaborative filtering techniques.
 \newblock {\em Advances in artificial intelligence}, 2009:4, 2009.
+
+\bibitem{tzanetakis2002musical}
+George Tzanetakis and Perry Cook.
+\newblock Musical genre classification of audio signals.
+\newblock {\em Speech and Audio Processing, IEEE transactions on},
+  10(5):293--302, 2002.
 
 \end{thebibliography}

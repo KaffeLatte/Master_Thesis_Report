@@ -5,16 +5,12 @@
 \usepackage[latin1]{inputenc}
 \usepackage[swedish,english]{babel}
 \usepackage{modifications}
-
+\usepackage{url}
 \usepackage{csquotes}
 \usepackage{graphicx}
-\title{Machine Learning Applied to Playlist Generation}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\title{Learning Playlist Representations for Automatic Playlist Generation}
 
-\subtitle{Duis autem vel eum iruire dolor in hendrerit in
-          vulputate velit esse molestie consequat, vel illum
-          dolore eu feugiat null}
-\foreigntitle{Lorem ipsum dolor sit amet, sed diam nonummy nibh eui
-              mod tincidunt ut laoreet dol}
 \author{Erik Aalto}
 \date{Juni 2015}
 \blurb{Master's Thesis at Spotify and CSC\\KTH Supervisor: Carl Henrik Ek\\Company Supervisor: Boxun Zhang\\KTH Examiner: Danica Kragic}
@@ -42,6 +38,7 @@
 \clearpage
 \begin{abstract}{Acknowledgements}
   I would like to thank ....surprise :)
+  \todo{Should be Acknowledgements and not abstract}
 
 \end{abstract}
 \clearpage
@@ -50,7 +47,10 @@
 \pagestyle{newchap}
 \chapter{Introduction}
 
-\section{Motivation}
+\section{What is Spotify?}
+Spotify is a music streaming service which charges premium users a fee and presents free users with ads. Record companies are then paid according to the popularity of the tracks for which they hold digital rights. Spotify was launched in October 2008 and today has over 60 million active users, from which over 15 million are paying for the premium user service.
+
+\section{Project Motivation}
 Spotify today has more playlists than songs in their music library. Spotify also provides curated playlists as a form of music recommendation for their users. 
 
 Given that a user has a preference for a specific playlist, an interesting feature would be to generate a playlist similar to the one a user has a preference for, but with different songs. This type of feature is interesting as it allows users to get music recommendations fitted to their needs. Such a feature could also give Spotify a competitive edge in the hardening competition for music streaming customers.
@@ -58,25 +58,12 @@ Given that a user has a preference for a specific playlist, an interesting featu
 \section{What are Recommender Systems?}
 Recommender systems provide an automated way to filter and rank information of interest for a certain user, possibly also taking time into account. A famous example of recommender systems is the product recommendation once initiated at Amazon, \textit{"Users who bought this product also bought"}. Another example of recommender systems are the movie recommendations provided by Netflix. Movie recommendations are interesting and non-trivial as a specific user at a certain time is likely to not be interested in the majority of movies provided by Netflix. The same thing applies to music, at any given moment a user is likely to not want to listen to the majority of songs in a music library . A last example of recommendation could be restaurant recommendation, where time and context are important factors. Recommending a simple hamburger restaurant is not likely to be of interest at date night, but it might be the perfect recommendation while driving the kids home after Saturday morning soccer game.
 
-\section{What is Spotify?}
-Spotify is a music streaming service which charges premium users a fee and presents free users with ads. Record companies are then paid according to the popularity of the tracks for which they hold digital rights. Spotify was launched in October 2008 and today has over 60 million active users, from which over 15 million are paying for the premium user service.
-
 \section{Project Aim}
 The aim of this thesis is to provide a scalable method for selecting candidate songs, in the context of playlist generation given a predefined playlist to mimic. This is an extension to the current field of music recommendation.  
 
-\section{Limitations}
 The work of this thesis is limited to finding candidate songs when generating playlists similar to Spotify \textit{Browse} playlists. The focus is on creating a scalable model of doing so. This means that any type of feature engineering is excluded from this thesis and the thesis is also limited from looking into the problem of ordering songs in playlist generation. 
 
 \part{Theory}
-
-\chapter{Computational Complexity}
-Here goes an introduction to Big-O notation and why it is important in the context of recommendation.
-
-\chapter{Basic Statistics}
-Here goes arithmetic mean, geometric mean, variance, standard deviation, covariance, dot product
-
-\chapter{Machine Learning}
-Here goes cosine measure, PCA, LSH, subspace projections, clustering, generative vs discriminative models, curse of dimensionality, factor analysis, possibly some evaluation theory
 
 \chapter{Background}
 
@@ -118,18 +105,24 @@ Where $b_u$ is the user bias term and $b_i$ is the item bias term.
 The resulting problem is a non-convex optimization problem, but by fixing either the user or item vectors the problem becomes convex and can be solved by the use of alternating least squares, where the cost function is guaranteed to get a lower value with each iteration\cite{hu2008collaborative}.
 
 \section{Content Based Approaches}
-Content based approaches for recommender systems recommend items that are similar to items  a user has had preference for in the past. This can be done by either comparing items to items or to create a user profile based on a users preferred items{adomavicius2005toward}. Content based approaches look at discrete features of items and tries to infer a similarity between two items given their similarity of features. A parallel can be drawn between content based recommendation and information retrieval.In the context of content based recommendation the cost function that is minimized is the distance between item.\cite{adomavicius2005toward}.
+Content based approaches for recommender systems recommend items that are similar to items  a user has had preference for in the past. This can be done by either comparing items to items or to create a user profile based on a users preferred items{adomavicius2005toward}. Content based approaches look at discrete features of items and tries to infer a similarity between two items given their similarity of features. A parallel can be drawn between content based recommendation and information retrieval. In the context of content based recommendation the cost function that is minimized is the distance between items.\cite{adomavicius2005toward}. One of the main features of content based recommenders are that they are able to provide recommendations even when little user history data is available, something that is one of the major drawbacks of collaborative filtering\cite{gunawardana2009unified}.
+
+Different approaches can be used to create the features used in content based recommendation in the music domain. One approach is to simply have human experts annotating tracks with information\cite{musicGenome}\cite{tzanetakis2002musical}. Other approaches could be to extract properties from the audio signal. One such example is the use of MFCCs, which creates features from short time intervals of each track\cite{logan2000mel} and another is to use Deep Belief Networks\cite{hamel2010learning}.
+
+An interesting property of content based recommendation is that it allows for relevance feedback, for example with use of the Rocchio algorithm. The Rocchio algorithm allows for a user to select a subset of recommended items as relevant and move the recommendations displayed towards the direction of those items in the vector space items are represented in\cite{pazzani2007content}.
 
 An example of a content based approach within music recommendation are the recommendations made by online radio station Pandora. 
 
 Downsides with content based recommendation are that a user can never be recommended something that is not similar to what the user has expressed preferences before in the past. Further, content based recommendation is limited to the features of items. If the features used to describe items are poor a content based recommender system is likely to perform poorly. Lastly, content based recommenders do not take sequential information into account. Thus a well written news article is seen identical to the same article written backwards as they contain exactly the same words\cite{adomavicius2005toward}.
 
 \section{Hybrid Systems}
-OLOLOLOL
+Hybrid systems are recommenders that combine both the techniques of collaborative filering and content based filtering, with the purpose of thus obtaining better recommendations. The underlying assumption is that a combination of content based recommenders and recommenders using collaborative filtering can redeem the weaknesses those methods face on their own\cite{gunawardana2009unified}. 
+
+Hybrid recommenders can be made by combining the results of collaborative filering methods with content based methods, by incorporating properties of one method into the other or by creating a model that incorporates properties of both types of systems\cite{adomavicius2005toward}.
 
 \chapter{Previous Work}
 \section{Probabilistic Graphical Models for Playlist Generation}
-Earlier attempts of playlist generation has been made by Microsoft Research. Ragno, Burges and Herley has made a model for playlist generation that can take any type of ordered playlist material, such as curated playlists or albums, as training data, and constructs an undirected graph between songs that are within the reach of a nth-order Markov model. In this graph nodes constitute songs and edges get their weights depending on how many times two songs fulfil the nth-order Markov property. Once this is done the undirected graph is converted into a directed graph where edges weight´s, the transition probabilities, are normalized by the sum of outgoing weights from each node. Once the undirected graph is made a playlist can be generated by selecting an initial seed song and simply performing a random walk in the graph. This model assumes that the connectivity between songs does not have to take order into account and that one can prevent playlist drifting by adding higher order Markov properties\cite{ragno2005inferring}. 
+Earlier attempts of playlist generation has been made by Microsoft Research. Ragno, Burges and Herley has made a model for playlist generation that can take any type of ordered playlist material, such as curated playlists or albums, as training data, and constructs an undirected graph between songs that are within the reach of a nth-order Markov model. In this graph nodes constitute songs and edges get their weights depending on how many times two songs fulfill the nth-order Markov property. Once this is done the undirected graph is converted into a directed graph where edges weight´s, the transition probabilities, are normalized by the sum of outgoing weights from each node. Once the undirected graph is made a playlist can be generated by selecting an initial seed song and simply performing a random walk in the graph. This model assumes that the connectivity between songs does not have to take order into account and that one can prevent playlist drifting by adding higher order Markov properties\cite{ragno2005inferring}. 
 
 From a contextual playlist generation perspective a problem with the approach taken by Rango, Burges and Herley is that if you generate a playlist from a random walk you cannot chose the playlist context for the generated playlist on before hand. Another problem with the probabilistic graphical model approach to playlist generation is that the graph created during training phase only works for songs that are in the training data set. This model is not generalizable so you cannot get a similar playlist to a playlist you like, but with different songs.
 
@@ -137,6 +130,48 @@ From a contextual playlist generation perspective a problem with the approach ta
 Another approach to playlist generation is to use gaussian processes, this approach has been taken by Platt et al, also at Microsoft Research. Here the authors try to learn a gaussian process prior from training data. This prior is then used together with a set of songs, for which a user has expressed preference, to generate a playlist given an initial seed song. In the training phase a blend of linear kernels is used to learn the relationship of meta data features among songs that come in sequence. The coefficients for each linear kernel is learnt by finding the coefficient that minimizes the difference between the empirical covariance between songs and the value given by the linear kernel. Empirical covariance is in this case as simple as whether the training data songs belong to the same album or not. Once the training phase is done the playlist generation phase consists of predicting the user preference for each song in a set of candidate songs, i.e. the f-star function in this case is the predicted user preference for a song. The f-star value is calculated by weighing the blend of linear kernels between a seed song and each candidate song with a factor. This factor is the sum of similarity between the initial seed song and each user preference song weighted by how central each user preference song is in the preference space. Playlist generation is then done by simply choosing the songs with highest f-star value\cite{platt2001learning}.
 
 This model generalizes to new songs, but the user preference space is seen as one single space. This is a simplification of reality where a user preference space is probably divided into several categories, for example a workout preference space and a chill-out preference space, something the model provided does not take into account, which can be claimed as a weakness in terms of playlist context generation. Neither does the model take the ordering of songs into account.
+
+\chapter{Representation Learning}
+Representation learning is about learning the factors that represent something. The idea behind representation learning is that the data used for a task often can be represented in a simpler way that is more suited for the task at hand\cite{bengio2013representation}. This idea is nothing novel, even as far back as during the time of Greek rationalists and atomists the idea that observed data was dependent upon something latent was present\cite{mulaik1987brief}. Representation learning assumes that there is an intrinsic representation of data that is less complex than the observed representation. One example could be an image represented by pixels. If the image is of size 320 x 320 pixels it can be thought reasonable to assume that the image has an equivalent amount of degrees of freedom as pixels. However in an image of a man wearing a shirt every pixel is not independent as most shirt pixels are adjacent to other shirt pixels and thus not independent for example. As all number of pixels in an image do not vary independently of each other learning a representation of images also means that the number of factors learned are less than the number of pixels for each image in the data set. A lower number of learned factors than observed ones implies that a dimensionality reduction is made while learning a representation. 
+Another explanation of learning representations is the one of Factor Analysis, which intends to describe how a number of observed variables vary together. One example could be points on a two dimensional plane in a three dimensional space. The points on the plane covary, but only in two dimensions. Therefore a dimensionality reduction can be made to describe the points in this plane, as they need not be described by three dimensions. However we cannot be sure that the points only vary in lets say the \textit{x} or \textit{y} direction. The directions in which the points vary must be learned and does not have to be well represented in the original dimensions of the vector space. These two learned dimensions of the plane then becomes the latent factors of the representation.
+Factor Analysis can be used in an exploratory way as a means of learning the underlying factors of something we want to represent, but it can also be used to synthetically generate data once the latent factors of the original data are learned.
+
+\section{Principal Component Analysis} 
+Learning a representation is about extracting latent factors from connected data. Connected data means that the data points in the data set examined are related to other data points in the same set. As there is covariance in the data latent factors can be learned. One way of deriving latent factors due to linear relationships in the data is Principal Component Analysis, PCA. What PCA can be said to do is to connect the covariance in a data set to a set of principal components that explain the variance in the data. To understand this connection lets look at the derivation of PCA:
+
+\begin{equation}
+C \in R^{D x D}
+X \in R^{N x D} 
+C = (X - \mu)^T (X - \mu)
+argmin_A {||C - A||}_F = \left\{C = V \lambda V^T = \sum_{i=1}^{D}\lambda_i v_i v_i^T \right\} 
+\end{equation}
+
+\begin{equation}
+= \left\{ A = \sum_{i=1}^{D}\gamma_i v_i v_i^T \right\} = {|| \sum_{i=1}^{D}\lambda_i v_i v_i^T - \sum_{i=1}^{D}\gamma_i  v_i v_i^T ||}_F = {|| \sum_{i=1}^{D}(\lambda_i - \gamma_i) v_i v_i^T ||}_F 
+\end{equation}
+
+\begin{equation}
+= {|| \sum_{i=1}^{d}(\lambda_i - \gamma_i) v_i v_i^T + \sum_{i = d}^{D}\lambda_i v_i v_i^T ||}_F
+\end{equation}
+
+Here \textit{X} is our data and \textit{C} is the covariance matrix of the data observed. A is an approximation of the covariance C and as can be seen from the derivation above. A approximates C up to a certain threshold of variance, if the full variance is covered then A will equal C, but if C only goes up to a certain threshold of variance a dimensionality reduction is made. In the general setting this means that a high threshold of variance, for example 90 percent, can be explained by $d < D$ dimensions. These dimensions that explain the major part of variance in the data can also be seen as the latent factors of the data. These factors are linear combinations of the original dimensions of data and are orthogonal to each other. Doing Principal Component Analysis of a data set is the same as doing an eigen decomposition of the covariance matrix of the data and selecting eigen vectors corresponding to eigen values up to a certain threshold. As PCA takes a covariance matrix as input and gives latent factors as output PCA can be said to connect the covariance of the data to a representation of the data.
+
+\includegraphics[scale=0.42]{images/pca.png}
+
+As can be seen in the figure above, the first principal component lays in the direction that describes the largest part of variance in data. The principal components are orthogonal to each other. 
+
+\section{Generalized vs Discriminative Models}
+
+
+\section{OLOL}
+Playlists consist of songs and as a random sample of songs does not make as good a flow of music as a carefully mixed playlist one can conclude that there is a relation between the tracks in playlists. The tracks in a playlist, even though being correlated, vary somehow. If the tracks in a playlist would not vary, a playlist would consist of the same song over and over again. A statistical method to describe such a variation as the one in a playlist is called Factor Analysis\cite{mulaik1987brief}. In Factor Analysis observable and latent, or hidden, variables are discussed. Observable variables are the ones that we can see or observe. 
+
+
+\chapter{Computational Complexity}
+Computational complexity theory is about analyzing the amount of resources needed to solve a particular problem and classifying problems according to how difficult they are to solve. Resources needed to solve a problem generally mean running time or memory, but could also include randomness or communication. Analyzing the time it takes for an algorithm to solve a problem is also called time complexity. Time complexity is a quantification of the time needed to solve a problem as a function of the length or size of the input. A common way to describe time complexity is the asymptotic behaviour of running time needed as a function of input, also called \textit{Big-O} notation. Time complexity analysis with \textit{Big-O} notation takes the dominant terms into regard as input data grows towards infinity. For example if we have a problem that for the length of input \textit{n} requires $(2n)^2$ operations the problem has a time complexity of $O(n^2)$. \textit{Big-O} notation assumes that some operations called trivial operations take a constant time to perform, \textit{O(1)}, and if \textit{n} such operations are performed the time complexity becomes \textit{O(n)}. All operations that do not grow with the size of input data are dropped using \textit{Big-O} notation. For example if an algorithm needs a cubic number of operations for each input data term and an additional thousand operations that do not change with the size of input data the total amount of operations needed is $n^3 + 1000$ which becomes $O(n^3)$
+
+One reason to why time complexity is important in the field of Machine Learning is that it gives a unified measure of the time and resources needed to solve a problem. One example is if the run-time for an algorithm is asked a not uncommon answer is that it takes x time. An answer as such gives no information of how the algorithm scales, whether it is implemented in an efficient manner or not or if the run-time is hardware dependent. For example, an algorithm that take one day to solve a problem, but has linear time complexity can solve the same problem for the double amount of data in two days. For an algorithm with quadratic running time it would take four days to solve the same problem should input data be doubled. Another example is if an algorithm is run on a brand new computer or a computer that is 15 years old, simply stating the run-time does not give a unified measure as run time will change depending on hardware. Lastly, given the size of input data and the time complexity of the algorithm a hint of the expected run-time can be obtained and used for debugging purposes.
+ As can be easily understood analyzing time complexity within the machine learning field is essential to understand the scalability of a machine learning algorithm. An algorithm that grows faster than linear with data quickly becomes unfeasible as the amount of data used grows large. In the case of Spotify the number of tracks in the song library and the number of users are in the magnitude of millions or tens of millions which means that even a linear run-time might be too slow to be practically usable.
 
 \part{Method}
 
@@ -201,7 +236,18 @@ A last approach for track candidate selection would be to use the subspace metho
 After studying linear relationships among features within playlists the study was extended to see if there were linear relationships among the ordering of songs as well. To do this the subspace method was used again. But instead of extracting the principal components for the variance of a playlist, the principal components describing the variance of all the start songs of all curated playlists were extracted. Once this was made a sample of songs from the curated playlist data set were projected into the first track manifold space created by the principal components of the first tracks. This was made to see if start tracks would have higher ranking, i.e. lower relative change in magnitude, than other tracks.
 
 \section{Playlist Comparison}
-As principal components were chosen to describe playlists, it is reasonable to assume that if principal components analysis works well for describing playlist characteristics, then the same approach should also work well for comparing playlists. Playlists were compared pairwise. To compare two playlists all eigenvectors from each playlist were multiplied by each other. By doing this the cosine measure of vector similarity for each pair of vectors was obtained. The problem with this approach is that it gives an unbalanced comparison. By simply looking at the similarity of eigenvectors implies that eigenvectors corresponding to low eigenvalues have the same importance as eigenvectors corresponding to high eigenvalues. For the reader uninitiated with eigenvalues this means that components explaining a high part of the characteristics of a playlist are regarded an equal importance as components explaining a low part of playlist characteristics. To remedy this problem the cosine score between eigenvectors from each playlist was scaled by the square root of the product of the corresponding eigenvalues. The result obtained from this multiplication was a matrix. To rank the similarity between these matrices some type of transformation from a matrix to a single value is needed. Several approaches were tested and are covered under the evaluation section.
+\todo{not really cosine similarity, not normalized}
+As principal components were chosen to describe playlists, it is reasonable to assume that if principal components analysis works well for describing playlist characteristics, then the same approach should also work well for comparing playlists. Playlists were compared pairwise. To compare two playlists all eigenvectors from each playlist were multiplied by each other. If we think of playlist A as  \[A = U_1 \lambda_1 U_1^T\] and of antother playlist B as \[B = U_2 \lambda_2 U_2^T\] then the operation performed to compare them can be seen as \[M = U_1 U_2^T\] where M is the resulting matrix from the comparison. By doing this the cosine measure of vector similarity for each pair of vectors was obtained. 
+
+The problem with this approach is that it gives an unbalanced comparison. By simply looking at the similarity of eigenvectors implies that eigenvectors corresponding to low eigenvalues have the same importance as eigenvectors corresponding to high eigenvalues. This means that components explaining a high part of the characteristics of a playlist are regarded an equal importance as components explaining a low part of playlist characteristics. To remedy this problem the cosine score between eigenvectors from each playlist was scaled by the square root of the product of the corresponding eigenvalues, which mathematically can be formulated as  \[M = U_1 \sqrt{\lambda_1} \sqrt{\lambda_2} U_2^T \] The result obtained from this multiplication was a square matrix. To rank the similarity between these matrices some type of transformation from a matrix to a single value is needed. The initial idea was to aggregate the entries of the matrix, but an aggregated value does not tell which values that have led up to the aggregated result. Therefore by simple adding values of the matrix one would not know if the similarity comes from dot products between vectors corresponding to high or low eigenvalues. Therefore it was choosen to only take the trace of the matrix into consideration. Three different approaches were taken: the sum of the values of the diagonal, the absolute value of the sum of the diagonal and the sum of the absolute values of the matrix diagonal. These approaches were taken to compare 28 playlists among themselves.
+
+\includegraphics[scale=0.6]{images/sum.png}
+
+\includegraphics[scale=0.6]{images/absSum.png}
+
+\includegraphics[scale=0.6]{images/sumAbs.png}
+
+As can be seen summing the absolute values of the matrix diagonal provides a good clustering of similar playlists in the data set used. From a theoretical perspective summing the absolute values is also the method that makes the most sense. Eigenvectors from the covariance matrix explains the direction of variance, but it does not really matter if the variance is seen as going from A to B or from B to A. Hence the direction of eigenvectors from a playlist feature covariance matrix does not really matter. If the direction of eigenvectors do not matter then the resulting values of the matrix diagonal, provided by multiplying the weighted eigenvectors from two different playlist covariance matrices, do not matter either and it makes sense to use the sum of absolute values as an aggregated measure is used.
 
 \section{Approximate Nearest Neighbours}
 OL
@@ -209,7 +255,80 @@ OL
 \part{Evaluation}
 
 \chapter{Results}
-OLOLOLOL
+\section{Precision}
+Evaluating a generated playlist is a difficult task as there is no known ground truth for what a good playlist is. Even when asking normal persons or domain experts opinions about what consists a good playlist are likely to differ. There are of course sanctioned methods for evaluating data when features are present, using the cosine distance as an evaluation metric is one such approach. However using such as metric presents new problems. If the cosine distance, for example, is used for evaluation this would imply that the cosine distance also should make up the cost function the model tries to minimize. But if the evaluation metric and the objective function one tries to minimize are the same is  there really an actual evaluation framework present or is the entire evaluation pipeline simply a tautology? Imagining the opposite is not compelling either. If one objective function is minimized by the model and another is used for evaluation one finds oneself in a situation of comparing apples and oranges, which is unlikely to be desired. Finding a way to evaluate generated playlists is without doubt a difficult task, but some metric is still needed as a proxy.
+The first evaluation approach choosen for evaluating generated playlists finds its roots in the method of describing playlist similarity described in the methods section. 
+
+\includegraphics[scale=0.6]{images/sumAbsAgglHierClust-better.png}
+
+Based on the method of comparing playlists by taking the dot product of the principal components of two playlists, weighting by eigen values and transforming the resulting matrix into a value by summing the absolute values of the trace of the matrix an additional hierarchical clustering step can be added to create meaningful playlists clusters, as seen in the picture above. As these clusters make up a sensible segmentation of playlists they where used as a base for evaluation. When the subspace method was applied to rank candidate songs for a seed playlist all songs that originates from a playlist within the same cluster as the seed playlist were considered true positives. All other songs were considered false positives. For the evaluation task a subset of data was used were only the tracks of the seven clusters consisting of more than one playlist from the figure above were used and pre-filtering was made by using approximate nearest neighbours with an euclidean distance measure. The approximate twenty nearest neighbours were used and the number of trees in each approximate nearest neighbour forest was varied. This is a non-optimal way of using approximate nearest neighbours as the proper way would mean to select a by magnitude larger number of neighbours than actually needed. The reason for not doing doing so is that as small data set was used for evaluation using the two-hundred nearest neighbours would mean that the pre-filtering step would loose its effect as almost the entire data set would pass through pre-filtering. 
+Precision was calculated for the ten, twenty and thirty top ranked songs. Calculating precision this way is a conservative measure as songs from playlists outside the cluster also might be good candidates. 
+To give a reference to how the model performs a random sample of songs after the approximate nearest neighbour step was also used were precision was calculated the same way as for the model.
+
+Model p@10
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_annoy/precision10.png}
+
+Random p@10
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eucl_annoy/precision10.png}
+
+Model p@20
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_annoy/precision20.png}
+
+Random p@20
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eucl_annoy/precision20.png}
+
+Model p@30
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_annoy/precision30.png}
+
+Random p@30
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eucl_annoy/precision30.png}
+
+As can be seen the model outperforms the baseline in many cases by 100 percent higher precision and never performs less than 40 percent better than the baseline.
+
+\section{Confusions}
+As can be seen in the image showing the playlist clusters there is often a high correlation between a playlist inside a cluster and another playlist outside the cluster, as for example between the playlists \textit{Digster SVENSK HIPHOP} and \textit{Dance Workout}. Using precision by only considering tracks from playlists inside the clusters as true positives is therefore a conservative measure and the actual results might therefore be better than what the precision results entail. To quantify and investigate to what extent false postives come from closely playlists histograms of the rank of false postives where made. Here the rank is the rank of how highly ranked the playlist the false positive sample originated from was related to the seed playlist for the entire data set.
+
+Histograms were made for all number of trees for the approximate nearest neighbour pre-filtering step.
+
+1 tree
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot1.png}
+
+3 trees
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot3.png}
+
+5 trees
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot5.png}
+
+10 trees
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot10.png}
+
+20 trees
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot20.png}
+
+30 trees
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot30.png}
+
+50 trees
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot50.png}
+
+There is a similar behaviour for all number of trees in the approximate nearest neighbour forest were roughly 40 percent of all false positives come from the five highest ranked playlists.
+
+\section{Qualitative Evaluations}
+To find out if the confused false positives really meant a higher amount of good candidate songs and to get an idea of how the selected candidate songs sounded to the human ear qualitative evaluations were performed. Three playlists for which the seed playlists Old School Hip Hop, Old School Rock and Old School Heavy were selected. The reason for selecting these playlists are that they contributed to uniformity of the test as they all were \textit{"Old School"} and all were genre playlists. Also Hip Hop was seen to precision a high performing playlist, Rock middle performing and Metal low performing so to see how well the performance of the quantitative measures responded to listeners opinions. To have a reference point both playlists with songs selected by the model as well as songs from the original curated playlists were selected. To haven an even distribution of biases from the persons listening to the playlists new playlists were created were ten songs came from the top ranked candidate songs by the model and the other ten songs were the first ones in the seed playlist. Users were then presented with these three playlists and were asked how well the first or last ten songs matched the theme, how many outliers there were and how well the songs matched the theme with outliers removed.
+
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Model.png}
+
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Reference.png}
+
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Model.png}
+
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Reference.png}
+
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Model.png}
+
+\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Reference.png}
+
+As can be seen form the user evaluations surprisingly the tracks from the model were ranked higher than those taken from the curated playlists for both Hip Hop and Rock. The model selected tracks for metal were ranked lower, but the users rankings confirmed the notion that precision as used for the quantitative evaluations was a conservative measure as users found less outliers than there were false positives from the quantitative evaluation.
 
 \chapter{Computational Complexity Analysis}
 OLOLOLOL

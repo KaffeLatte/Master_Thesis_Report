@@ -1,0 +1,37 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{What are Recommender Systems?}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{What is Spotify?}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Project Aim}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Limitations}{chapter.1}% 6
+\BOOKMARK [-1][-]{part.1}{Theory}{}% 7
+\BOOKMARK [0][-]{chapter.2}{Computational Complexity}{part.1}% 8
+\BOOKMARK [0][-]{chapter.3}{Basic Statistics}{part.1}% 9
+\BOOKMARK [0][-]{chapter.4}{Machine Learning}{part.1}% 10
+\BOOKMARK [0][-]{chapter.5}{Background}{part.1}% 11
+\BOOKMARK [1][-]{section.5.1}{Collaborative Filtering}{chapter.5}% 12
+\BOOKMARK [1][-]{section.5.2}{Content Based Approaches}{chapter.5}% 13
+\BOOKMARK [1][-]{section.5.3}{Hybrid Systems}{chapter.5}% 14
+\BOOKMARK [0][-]{chapter.6}{Previous Work}{part.1}% 15
+\BOOKMARK [1][-]{section.6.1}{Probabilistic Graphical Models for Playlist Generation}{chapter.6}% 16
+\BOOKMARK [1][-]{section.6.2}{Gaussian Processes for Playlist Generation}{chapter.6}% 17
+\BOOKMARK [-1][-]{part.2}{Method}{}% 18
+\BOOKMARK [0][-]{chapter.7}{Methodology}{part.2}% 19
+\BOOKMARK [1][-]{section.7.1}{Problem Outline}{chapter.7}% 20
+\BOOKMARK [1][-]{section.7.2}{Assumptions}{chapter.7}% 21
+\BOOKMARK [1][-]{section.7.3}{Data}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.4}{Pre-processing}{chapter.7}% 23
+\BOOKMARK [1][-]{section.7.5}{Exploratory Data Analysis}{chapter.7}% 24
+\BOOKMARK [1][-]{section.7.6}{Learning Playlist Characteristics}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.7}{Handling zero variance terms}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.8}{Selecting candidate songs for a playlist context}{chapter.7}% 27
+\BOOKMARK [2][-]{subsection.7.8.1}{Subspace method}{section.7.8}% 28
+\BOOKMARK [1][-]{section.7.9}{First Track Manifold}{chapter.7}% 29
+\BOOKMARK [1][-]{section.7.10}{Playlist Comparison}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.11}{Approximate Nearest Neighbours}{chapter.7}% 31
+\BOOKMARK [-1][-]{part.3}{Evaluation}{}% 32
+\BOOKMARK [0][-]{chapter.8}{Results}{part.3}% 33
+\BOOKMARK [0][-]{chapter.9}{Computational Complexity Analysis}{part.3}% 34
+\BOOKMARK [0][-]{section*.5}{Bibliography}{part.3}% 35
+\BOOKMARK [0][-]{section*.6}{Appendices}{part.3}% 36
+\BOOKMARK [0][-]{appendix.A}{RDF}{part.3}% 37
