@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.7)  28 MAY 2015 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.7)  1 JUN 2015 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1170,21 +1170,28 @@ Overfull \hbox (66.0662pt too wide) in paragraph at lines 257--258
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28 <./images/absSum.png>]
+ [28 <./images/absSum.png>] <images/Annoy_cos.png, id=151, 261.97874pt x 263.98
+625pt>
+File: images/Annoy_cos.png Graphic file (type png)
+
+<use images/Annoy_cos.png>
+Package pdftex.def Info: images/Annoy_cos.png used on input line 263.
+(pdftex.def)             Requested size: 157.18845pt x 158.39296pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29 <./images/sumAbs.png>] [30] [31
+ [29 <./images/sumAbs.png>] [30 <./images/Annoy_cos.png>] [31
 
 ] [32]
-<images/sumAbsAgglHierClust-better.png, id=165, 741.77126pt x 729.72626pt>
+<images/sumAbsAgglHierClust-better.png, id=167, 741.77126pt x 729.72626pt>
 File: images/sumAbsAgglHierClust-better.png Graphic file (type png)
 
 <use images/sumAbsAgglHierClust-better.png>
 Package pdftex.def Info: images/sumAbsAgglHierClust-better.png used on input li
-ne 271.
+ne 272.
 (pdftex.def)             Requested size: 445.0662pt x 437.83914pt.
 
-Overfull \hbox (66.0662pt too wide) in paragraph at lines 271--272
+Overfull \hbox (66.0662pt too wide) in paragraph at lines 272--273
 [][] 
  []
 
@@ -1197,276 +1204,477 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [34 <./images/sumAbsAgglHierClust-better.png>]
-</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_anno
-y/precision10.png, id=173, 481.8pt x 481.8pt>
-File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl
-_annoy/precision10.png Graphic file (type png)
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
+ter/model/p10_0outlierRmvd.png, id=175, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/model/p10_0outlierRmvd.png Graphic file (type png)
 
-<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_
-annoy/precision10.png>
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
+_jitter/model/p10_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/pca_eucl_annoy/precision10.png used on input line 278.
-(pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
+s/boxplots/ggplot/no_jitter/model/p10_0outlierRmvd.png used on input line 280.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eucl_a
-nnoy/precision10.png, id=174, 481.8pt x 481.8pt>
-File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_e
-ucl_annoy/precision10.png Graphic file (type png)
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
+ter/random/p10_0outlierRmvd.png, id=176, 2454.16875pt x 2730.2pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/random/p10_0outlierRmvd.png Graphic file (type png)
 
-<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eu
-cl_annoy/precision10.png>
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
+_jitter/random/p10_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/random_eucl_annoy/precision10.png used on input line 281.
-(pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
+s/boxplots/ggplot/no_jitter/random/p10_0outlierRmvd.png used on input line 283.
+
+(pdftex.def)             Requested size: 245.43124pt x 273.036pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl
-_annoy/precision10.png>]
-</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_anno
-y/precision20.png, id=180, 481.8pt x 481.8pt>
-File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl
-_annoy/precision20.png Graphic file (type png)
+ [35 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/model/p10_0outlierRmvd.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
+ter/model/p20_0outlierRmvd.png, id=182, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/model/p20_0outlierRmvd.png Graphic file (type png)
 
-<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_
-annoy/precision20.png>
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
+_jitter/model/p20_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/pca_eucl_annoy/precision20.png used on input line 284.
-(pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
+s/boxplots/ggplot/no_jitter/model/p20_0outlierRmvd.png used on input line 287.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eucl_a
-nnoy/precision20.png, id=181, 481.8pt x 481.8pt>
-File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_e
-ucl_annoy/precision20.png Graphic file (type png)
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
+ter/random/p20_0outlierRmvd.png, id=183, 2454.16875pt x 2730.2pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/random/p20_0outlierRmvd.png Graphic file (type png)
 
-<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eu
-cl_annoy/precision20.png>
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
+_jitter/random/p20_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/random_eucl_annoy/precision20.png used on input line 287.
-(pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
+s/boxplots/ggplot/no_jitter/random/p20_0outlierRmvd.png used on input line 290.
+
+(pdftex.def)             Requested size: 245.43124pt x 273.036pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_e
-ucl_annoy/precision10.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/im
-ages/boxplots/pca_eucl_annoy/precision20.png>]
-</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_anno
-y/precision30.png, id=187, 481.8pt x 481.8pt>
-File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl
-_annoy/precision30.png Graphic file (type png)
+ [36 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/random/p10_0outlierRmvd.png> </Users/eaalto/Desktop/Latex/Master_Thesi
+s_Report/images/boxplots/ggplot/no_jitter/model/p20_0outlierRmvd.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
+ter/model/p30_0outlierRmvd.png, id=189, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/model/p30_0outlierRmvd.png Graphic file (type png)
 
-<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/pca_eucl_
-annoy/precision30.png>
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
+_jitter/model/p30_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/pca_eucl_annoy/precision30.png used on input line 290.
-(pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
+s/boxplots/ggplot/no_jitter/model/p30_0outlierRmvd.png used on input line 293.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eucl_a
-nnoy/precision30.png, id=188, 481.8pt x 481.8pt>
-File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_e
-ucl_annoy/precision30.png Graphic file (type png)
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
+ter/random/p30_0outlierRmvd.png, id=190, 2454.16875pt x 2730.2pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/random/p30_0outlierRmvd.png Graphic file (type png)
 
-<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_eu
-cl_annoy/precision30.png>
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
+_jitter/random/p30_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/random_eucl_annoy/precision30.png used on input line 293.
-(pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
+s/boxplots/ggplot/no_jitter/random/p30_0outlierRmvd.png used on input line 296.
+
+(pdftex.def)             Requested size: 245.43124pt x 273.036pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_e
-ucl_annoy/precision20.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/im
-ages/boxplots/pca_eucl_annoy/precision30.png>]
+ [37 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/random/p20_0outlierRmvd.png> </Users/eaalto/Desktop/Latex/Master_Thesi
+s_Report/images/boxplots/ggplot/no_jitter/model/p30_0outlierRmvd.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p10_0o
+utlierRmvd.png, id=196, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
+10_0outlierRmvd.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p1
+0_0outlierRmvd.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/boxplots/ggplot/p10_0outlierRmvd.png used on input line 302.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p20_0o
+utlierRmvd.png, id=197, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
+20_0outlierRmvd.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p2
+0_0outlierRmvd.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/boxplots/ggplot/p20_0outlierRmvd.png used on input line 305.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
+o_jitter/random/p30_0outlierRmvd.png> </Users/eaalto/Desktop/Latex/Master_Thesi
+s_Report/images/boxplots/ggplot/p10_0outlierRmvd.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p30_0o
+utlierRmvd.png, id=203, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
+30_0outlierRmvd.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p3
+0_0outlierRmvd.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/boxplots/ggplot/p30_0outlierRmvd.png used on input line 308.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p10_1o
+utlierRmvd.png, id=204, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
+10_1outlierRmvd.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p1
+0_1outlierRmvd.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/boxplots/ggplot/p10_1outlierRmvd.png used on input line 313.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
+Overfull \hbox (1.84663pt too wide) in paragraph at lines 312--314
+[]\T1/lmr/m/n/10.95 Model@10 1 out-lier re-moved [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
+20_0outlierRmvd.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/b
+oxplots/ggplot/p30_0outlierRmvd.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p20_1o
+utlierRmvd.png, id=210, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
+20_1outlierRmvd.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p2
+0_1outlierRmvd.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/boxplots/ggplot/p20_1outlierRmvd.png used on input line 316.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
+Overfull \hbox (1.84663pt too wide) in paragraph at lines 315--317
+[]\T1/lmr/m/n/10.95 Model@20 1 out-lier re-moved [] 
+ []
+
+
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p30_1o
+utlierRmvd.png, id=211, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
+30_1outlierRmvd.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p3
+0_1outlierRmvd.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/boxplots/ggplot/p30_1outlierRmvd.png used on input line 319.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
+Overfull \hbox (1.84663pt too wide) in paragraph at lines 318--320
+[]\T1/lmr/m/n/10.95 Model@30 1 out-lier re-moved [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
+10_1outlierRmvd.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/b
+oxplots/ggplot/p20_1outlierRmvd.png>] [41 </Users/eaalto/Desktop/Latex/Master_T
+hesis_Report/images/boxplots/ggplot/p30_1outlierRmvd.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-1.png, id=194, 481.8pt x 481.8pt>
+1.png, id=223, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot1.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot1.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot1.png used on input line 303.
+s/confRanks/confRankPlot1.png used on input line 327.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
+um1.png, id=224, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kCumSum1.png Graphic file (type png)
 
- [38 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/random_e
-ucl_annoy/precision30.png>]
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
+CumSum1.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/confRanks/confRankCumSum1.png used on input line 330.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-3.png, id=199, 481.8pt x 481.8pt>
+3.png, id=225, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot3.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot3.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot3.png used on input line 306.
+s/confRanks/confRankPlot3.png used on input line 334.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kPlot1.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/
+confRankCumSum1.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
+um3.png, id=231, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kCumSum3.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
+CumSum3.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/confRanks/confRankCumSum3.png used on input line 337.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-5.png, id=200, 481.8pt x 481.8pt>
+5.png, id=232, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot5.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot5.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot5.png used on input line 309.
+s/confRanks/confRankPlot5.png used on input line 340.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
-kPlot1.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/
-confRankPlot3.png>]
+ [43 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kPlot3.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/
+confRankCumSum3.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
+um5.png, id=238, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kCumSum5.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
+CumSum5.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/confRanks/confRankCumSum5.png used on input line 343.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-10.png, id=206, 481.8pt x 481.8pt>
+10.png, id=239, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot10.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot10.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot10.png used on input line 312.
+s/confRanks/confRankPlot10.png used on input line 346.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kPlot5.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/
+confRankCumSum5.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
+um10.png, id=245, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kCumSum10.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
+CumSum10.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/confRanks/confRankCumSum10.png used on input line 349.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-20.png, id=207, 481.8pt x 481.8pt>
+20.png, id=246, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot20.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot20.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot20.png used on input line 315.
+s/confRanks/confRankPlot20.png used on input line 352.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
-kPlot5.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/
-confRankPlot10.png>]
+ [45 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kPlot10.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks
+/confRankCumSum10.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
+um20.png, id=252, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kCumSum20.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
+CumSum20.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/confRanks/confRankCumSum20.png used on input line 355.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-30.png, id=214, 481.8pt x 481.8pt>
+30.png, id=253, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot30.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot30.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot30.png used on input line 318.
+s/confRanks/confRankPlot30.png used on input line 358.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kPlot20.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks
+/confRankCumSum20.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
+um30.png, id=259, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kCumSum30.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
+CumSum30.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/confRanks/confRankCumSum30.png used on input line 361.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-50.png, id=215, 481.8pt x 481.8pt>
+50.png, id=260, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot50.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot50.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot50.png used on input line 321.
+s/confRanks/confRankPlot50.png used on input line 364.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
-kPlot20.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks
-/confRankPlot30.png>] [42 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/ima
-ges/confRanks/confRankPlot50.png>]
+ [47 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kPlot30.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks
+/confRankCumSum30.png>]
+</Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
+um50.png, id=267, 2454.16875pt x 2061.7025pt>
+File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kCumSum50.png Graphic file (type png)
+
+<use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
+CumSum50.png>
+Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
+s/confRanks/confRankCumSum50.png used on input line 367.
+(pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
+kPlot50.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks
+/confRankCumSum50.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Model
-.png, id=226, 481.8pt x 481.8pt>
+.png, id=273, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_
 Model.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_M
 odel.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/HipHop_Model.png used on input line 328.
+s/qvalEvals/HipHop_Model.png used on input line 374.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Refer
-ence.png, id=227, 481.8pt x 481.8pt>
+ence.png, id=274, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_
 Reference.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_R
 eference.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/HipHop_Reference.png used on input line 330.
+s/qvalEvals/HipHop_Reference.png used on input line 376.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_
+Model.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Model.p
-ng, id=228, 481.8pt x 481.8pt>
+ng, id=279, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Mo
 del.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Mod
 el.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/Rock_Model.png used on input line 332.
+s/qvalEvals/Rock_Model.png used on input line 378.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_
-Model.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/H
-ipHop_Reference.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Referen
-ce.png, id=234, 481.8pt x 481.8pt>
+ce.png, id=280, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Re
 ference.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Ref
 erence.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/Rock_Reference.png used on input line 334.
+s/qvalEvals/Rock_Reference.png used on input line 380.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_
+Reference.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEva
+ls/Rock_Model.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Model.
-png, id=235, 481.8pt x 481.8pt>
+png, id=286, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_M
 odel.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Mo
 del.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/Metal_Model.png used on input line 336.
+s/qvalEvals/Metal_Model.png used on input line 382.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Mo
-del.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Roc
-k_Reference.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Refere
-nce.png, id=241, 481.8pt x 481.8pt>
+nce.png, id=287, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_R
 eference.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Re
 ference.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/Metal_Reference.png used on input line 338.
+s/qvalEvals/Metal_Reference.png used on input line 384.
 (pdftex.def)             Requested size: 289.08221pt x 289.08221pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_M
-odel.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Me
-tal_Reference.png>] [46] [47
+ [51 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Re
+ference.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals
+/Metal_Model.png>] [52 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images
+/qvalEvals/Metal_Reference.png>] [53
 
-] [48] (./Master_Thesis_Erik_AaltoV2.bbl [49
+] [54] (./Master_Thesis_Erik_AaltoV2.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 401--1
 
-] [50
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55
 
 ]
+[56]
 bibitemlist
-[51]
+[57
+
+]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 80.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [52] [53
+)) [58] [59
 
 ]
 \tf@toc=\write5
@@ -1475,10 +1683,10 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (./Master_Thesis_Erik_AaltoV2.aux) ) 
 Here is how much of TeX's memory you used:
- 17857 strings out of 493117
- 333246 string characters out of 6135434
+ 17925 strings out of 493117
+ 338807 string characters out of 6135434
  399851 words of memory out of 5000000
- 20943 multiletter control sequences out of 15000+600000
+ 20999 multiletter control sequences out of 15000+600000
  92358 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,13n,76p,2620b,925s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1502,10 +1710,10 @@ ss12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 ocal/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Master_Thesis_Erik_AaltoV2.pdf (61 pages, 1405957 bytes).
+Output written on Master_Thesis_Erik_AaltoV2.pdf (67 pages, 4171173 bytes).
 PDF statistics:
- 338 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
+ 385 PDF objects out of 1000 (max. 8388607)
+ 216 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 148 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 

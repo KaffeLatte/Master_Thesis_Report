@@ -38,13 +38,14 @@
 \contentsline {part}{\partnumberline {III}Evaluation}{31}
 \contentsline {chapter}{\chapternumberline {7}Results}{33}
 \contentsline {section}{\numberline {7.1}Precision}{33}
-\contentsline {section}{\numberline {7.2}Confusions}{38}
-\contentsline {section}{\numberline {7.3}Qualitative Evaluations}{42}
-\contentsline {chapter}{\chapternumberline {8}Computational Complexity Analysis}{47}
-\contentsline {section}{\numberline {8.1}Time Complexity of Model}{47}
-\contentsline {chapter}{\chapternumberline {9}Discussion and Future Work}{49}
-\contentsline {section}{\numberline {9.1}Discussion}{49}
-\contentsline {section}{\numberline {9.2}Future Work}{49}
-\contentsline {chapter}{Bibliography}{51}
-\contentsline {chapter}{Appendices}{52}
-\contentsline {appendix}{\chapternumberline {A}RDF}{53}
+\contentsline {section}{\numberline {7.2}Comparing Model to Baseline}{35}
+\contentsline {section}{\numberline {7.3}Confusions}{41}
+\contentsline {section}{\numberline {7.4}Qualitative Evaluations}{49}
+\contentsline {chapter}{\chapternumberline {8}Computational Complexity Analysis}{53}
+\contentsline {section}{\numberline {8.1}Time Complexity of Model}{53}
+\contentsline {chapter}{\chapternumberline {9}Discussion and Future Work}{55}
+\contentsline {section}{\numberline {9.1}Discussion}{55}
+\contentsline {section}{\numberline {9.2}Future Work}{56}
+\contentsline {chapter}{Bibliography}{57}
+\contentsline {chapter}{Appendices}{58}
+\contentsline {appendix}{\chapternumberline {A}RDF}{59}
