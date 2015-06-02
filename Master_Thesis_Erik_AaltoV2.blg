@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Master_Thesis_Erik_AaltoV2.aux
 The style file: plain.bst
 Database file #1: refList.bib
-You've used 20 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            622 strings with 7541 characters,
-and the built_in function-call counts, 8019 in all, are:
-= -- 840
-> -- 303
+            627 strings with 7698 characters,
+and the built_in function-call counts, 8223 in all, are:
+= -- 859
+> -- 310
 < -- 10
-+ -- 124
-- -- 98
-* -- 511
-:= -- 1218
-add.period$ -- 68
-call.type$ -- 20
-change.case$ -- 108
++ -- 127
+- -- 100
+* -- 516
+:= -- 1252
+add.period$ -- 71
+call.type$ -- 21
+change.case$ -- 112
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 341
-empty$ -- 669
-format.name$ -- 98
-if$ -- 1780
+cite$ -- 21
+duplicate$ -- 348
+empty$ -- 691
+format.name$ -- 100
+if$ -- 1825
 int.to.chr$ -- 0
-int.to.str$ -- 20
+int.to.str$ -- 21
 missing$ -- 19
-newline$ -- 103
-num.names$ -- 40
-pop$ -- 130
+newline$ -- 108
+num.names$ -- 42
+pop$ -- 138
 preamble$ -- 1
-purify$ -- 88
+purify$ -- 91
 quote$ -- 0
-skip$ -- 266
+skip$ -- 274
 stack$ -- 0
-substring$ -- 601
-swap$ -- 119
+substring$ -- 606
+swap$ -- 120
 text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 80
+type$ -- 84
 warning$ -- 0
-while$ -- 85
-width$ -- 22
-write$ -- 227
+while$ -- 87
+width$ -- 23
+write$ -- 236

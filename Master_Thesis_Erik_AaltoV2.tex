@@ -46,17 +46,15 @@
 \mainmatter
 \pagestyle{newchap}
 \chapter{Introduction}
+This chapter intends  to provide the reader with an overview of the fields of music consumption and recommendation as well as the outline and limitations of this thesis project.
 
-\section{What is Spotify?}
-Spotify is a music streaming service which charges premium users a fee and presents free users with ads. Record companies are then paid according to the popularity of the tracks for which they hold digital rights. Spotify was launched in October 2008 and today has over 60 million active users, from which over 15 million are paying for the premium user service.
+\section{Project Introduction}
+Spotify is a music streaming service that provides music content from a very large database. As of the writing of this thesis the Spotify song library contained over 30 million songs with over twenty thousand songs added on a daily basis\cite{spotifyPress}. Spotify generates revenue by charging a fee from subscribing users, this service is called \textit{Spotify Premium}. A free version of music streaming is also available where revenue is obtained by presenting users with ads. Record companies, who own the music streamed from Spotify, are paid according to the popularity of the tracks for which they hold digital rights. Spotify was launched in October 2008 and today over twenty percent of the user pool subscribe to the premium service with over 15 million paying subscribers and over 60 million users in total\cite{spotifyPress}.
 
-\section{Project Motivation}
-Spotify today has more playlists than songs in their music library. Spotify also provides curated playlists as a form of music recommendation for their users. 
+The consumption of music in the Spotify client can be done by listening to individual songs, top charts, albums or playlists created by either users themselves or professional playlist curators. The use of playlists is a popular means of consuming music and Spotify currently holds over 1.5 billion playlists, a number that is larger than the number of songs provided by Spotify by several magnitudes\cite{spotifyPress}. Playlists are particularly interesting in the context of music consumption as well curated playlists intend to create a specific atmosphere that can be enjoyed without interaction from the user. Albums can also be seen as playlists and the launch of the iTunes store caused controversies as users were allowed to buy individual songs and thus loosing the particular experience album creators seeked to create. The importance of playlists can still be seen as some songs only can be bought as part of an album on iTunes, without mentioning the numerous number of DJs who are striving for the creation of the perfect music experience for a specific moment. 
+Given that a user has a preference for a specific playlist, an interesting feature would be to generate a playlist similar to the one a user has a preference for, but with different songs. This type of feature is interesting as it allows users to get music recommendations fitted to their needs. Such a feature could give Spotify a competitive edge in the hardening competition for music streaming customers and provide a complement to the manually curated playlists provided by Spotify.
 
-Given that a user has a preference for a specific playlist, an interesting feature would be to generate a playlist similar to the one a user has a preference for, but with different songs. This type of feature is interesting as it allows users to get music recommendations fitted to their needs. Such a feature could also give Spotify a competitive edge in the hardening competition for music streaming customers.
-
-\section{What are Recommender Systems?}
-Recommender systems provide an automated way to filter and rank information of interest for a certain user, possibly also taking time into account. A famous example of recommender systems is the product recommendation once initiated at Amazon, \textit{"Users who bought this product also bought"}. Another example of recommender systems are the movie recommendations provided by Netflix. Movie recommendations are interesting and non-trivial as a specific user at a certain time is likely to not be interested in the majority of movies provided by Netflix. The same thing applies to music, at any given moment a user is likely to not want to listen to the majority of songs in a music library . A last example of recommendation could be restaurant recommendation, where time and context are important factors. Recommending a simple hamburger restaurant is not likely to be of interest at date night, but it might be the perfect recommendation while driving the kids home after Saturday morning soccer game.
+The process of automatically suggesting music adapted to a specific user is a field of its own and is called recommendation. More specifically the software providing such recommendations are called recommender systems. Recommender systems provide an automated way to filter and rank information of interest for a certain user, possibly also taking time into account. A famous example of recommender systems is the product recommendation once initiated at Amazon, \textit{"Users who bought this product also bought"}. Another example of recommender systems are the movie recommendations provided by Netflix. Movie recommendations are interesting and non-trivial as a specific user at a certain time is likely to not be interested in the majority of movies provided by Netflix. The importance of good recommendations can be seen from the creation of the \textit{Netflix Prize}, a challenge created by Netflix to improve the movie recommendations provided by them. The Netflix Prize was a contest intending to improve the prediction of user ratings for unseen movies with a 1 million dollar premium for the winning team. A last example of recommendation could be restaurant recommendation, where time and context are important factors. Recommending a simple hamburger restaurant is not likely to be of interest at date night, but it might be the perfect recommendation while driving the kids home after Saturday morning soccer game.
 
 \section{Project Aim}
 The aim of this thesis is to provide a scalable method for selecting candidate songs, in the context of playlist generation given a predefined playlist to mimic. This is an extension to the current field of music recommendation.  
@@ -121,6 +119,8 @@ Hybrid systems are recommenders that combine both the techniques of collaborativ
 Hybrid recommenders can be made by combining the results of collaborative filering methods with content based methods, by incorporating properties of one method into the other or by creating a model that incorporates properties of both types of systems\cite{adomavicius2005toward}.
 
 \chapter{Previous Work}
+Chapter 2 gave a general overview to the field of recommender systems. However, the approaches presented where either based on item to item recommendation or recommendations of the type item to user. The problem this thesis intends to solve regards music or more specifically playlists, why previous work related to playlist generation is presented in this chapter. 
+
 \section{Probabilistic Graphical Models for Playlist Generation}
 Earlier attempts of playlist generation has been made by Microsoft Research. Ragno, Burges and Herley has made a model for playlist generation that can take any type of ordered playlist material, such as curated playlists or albums, as training data, and constructs an undirected graph between songs that are within the reach of a nth-order Markov model. In this graph nodes constitute songs and edges get their weights depending on how many times two songs fulfill the nth-order Markov property. Once this is done the undirected graph is converted into a directed graph where edges weight´s, the transition probabilities, are normalized by the sum of outgoing weights from each node. Once the undirected graph is made a playlist can be generated by selecting an initial seed song and simply performing a random walk in the graph. This model assumes that the connectivity between songs does not have to take order into account and that one can prevent playlist drifting by adding higher order Markov properties\cite{ragno2005inferring}. 
 
@@ -132,6 +132,8 @@ Another approach to playlist generation is to use gaussian processes, this appro
 This model generalizes to new songs, but the user preference space is seen as one single space. This is a simplification of reality where a user preference space is probably divided into several categories, for example a workout preference space and a chill-out preference space, something the model provided does not take into account, which can be claimed as a weakness in terms of playlist context generation. Neither does the model take the ordering of songs into account.
 
 \chapter{Representation Learning}
+Playlists consist of songs and as a random sample of songs does not make as good a flow of music as a carefully mixed playlist one can conclude that there is a relation between the tracks in playlists. The tracks in a playlist, even though being correlated, vary somehow. Methods to learn the underlying factors of how a good playlist varies all involve learning a representation. This chapter will give an introduction to this field called representation learning.
+
 Representation learning is about learning the factors that represent something. The idea behind representation learning is that the data used for a task often can be represented in a simpler way that is more suited for the task at hand\cite{bengio2013representation}. This idea is nothing novel, even as far back as during the time of Greek rationalists and atomists the idea that observed data was dependent upon something latent was present\cite{mulaik1987brief}. Representation learning assumes that there is an intrinsic representation of data that is less complex than the observed representation. One example could be an image represented by pixels. If the image is of size 320 x 320 pixels it can be thought reasonable to assume that the image has an equivalent amount of degrees of freedom as pixels. However in an image of a man wearing a shirt every pixel is not independent as most shirt pixels are adjacent to other shirt pixels and thus not independent for example. As all number of pixels in an image do not vary independently of each other learning a representation of images also means that the number of factors learned are less than the number of pixels for each image in the data set. A lower number of learned factors than observed ones implies that a dimensionality reduction is made while learning a representation. 
 Another explanation of learning representations is the one of Factor Analysis, which intends to describe how a number of observed variables vary together. One example could be points on a two dimensional plane in a three dimensional space. The points on the plane covary, but only in two dimensions. Therefore a dimensionality reduction can be made to describe the points in this plane, as they need not be described by three dimensions. However we cannot be sure that the points only vary in lets say the \textit{x} or \textit{y} direction. The directions in which the points vary must be learned and does not have to be well represented in the original dimensions of the vector space. These two learned dimensions of the plane then becomes the latent factors of the representation.
 Factor Analysis can be used in an exploratory way as a means of learning the underlying factors of something we want to represent, but it can also be used to synthetically generate data once the latent factors of the original data are learned.
@@ -156,19 +158,15 @@ argmin_A {||C - A||}_F = \left\{C = V \lambda V^T = \sum_{i=1}^{D}\lambda_i v_i 
 
 Here \textit{X} is our data and \textit{C} is the covariance matrix of the data observed. A is an approximation of the covariance C and as can be seen from the derivation above. A approximates C up to a certain threshold of variance, if the full variance is covered then A will equal C, but if C only goes up to a certain threshold of variance a dimensionality reduction is made. In the general setting this means that a high threshold of variance, for example 90 percent, can be explained by $d < D$ dimensions. These dimensions that explain the major part of variance in the data can also be seen as the latent factors of the data. These factors are linear combinations of the original dimensions of data and are orthogonal to each other. Doing Principal Component Analysis of a data set is the same as doing an eigen decomposition of the covariance matrix of the data and selecting eigen vectors corresponding to eigen values up to a certain threshold. As PCA takes a covariance matrix as input and gives latent factors as output PCA can be said to connect the covariance of the data to a representation of the data.
 
+\begin{figure}
 \includegraphics[scale=0.42]{images/pca.png}
+\caption{Graphical illustration of PCA}
+\end{figure}
+
 
 As can be seen in the figure above, the first principal component lays in the direction that describes the largest part of variance in data. The principal components are orthogonal to each other. 
 
 \section{Generalized vs Discriminative Models}
-
-
-\section{OLOL}
-Playlists consist of songs and as a random sample of songs does not make as good a flow of music as a carefully mixed playlist one can conclude that there is a relation between the tracks in playlists. The tracks in a playlist, even though being correlated, vary somehow. If the tracks in a playlist would not vary, a playlist would consist of the same song over and over again. A statistical method to describe such a variation as the one in a playlist is called Factor Analysis\cite{mulaik1987brief}. In Factor Analysis observable and latent, or hidden, variables are discussed. Observable variables are the ones that we can see or observe. 
-
-
-\chapter{Computational Complexity}
-Computational complexity theory is about analyzing the amount of resources needed to solve a particular problem and classifying problems according to how difficult they are to solve. Resources needed to solve a problem generally mean running time or memory, but could also include randomness or communication. Analyzing the time it takes for an algorithm to solve a problem is also called time complexity. Time complexity is a quantification of the time needed to solve a problem as a function of the length or size of the input. A common way to describe time complexity is the asymptotic behaviour of running time needed as a function of input, also called \textit{Big-O} notation. Time complexity analysis with \textit{Big-O} notation takes the dominant terms into regard as input data grows towards infinity. For example if we have a problem that for the length of input \textit{n} requires $(2n)^2$ operations the problem has a time complexity of $O(n^2)$. \textit{Big-O} notation assumes that some operations called trivial operations take a constant time to perform, \textit{O(1)}, and if \textit{n} such operations are performed the time complexity becomes \textit{O(n)}. All operations that do not grow with the size of input data are dropped using \textit{Big-O} notation. For example if an algorithm needs a cubic number of operations for each input data term and an additional thousand operations that do not change with the size of input data the total amount of operations needed is $n^3 + 1000$ which becomes $O(n^3)$
 
 \part{Method}
 
@@ -202,7 +200,11 @@ To get an overview of whether features of tracks in a curated playlist relate to
 
 Performing plots of feature covariances of a playlist also shows whether there are linear realtionships among features in that playlist or not.
 
+\begin{figure}
 \includegraphics[scale=0.6]{images/0removedPlistFeaturePlot.png}
+\caption{Visualization of covariances in a sample playlist. Zero variance terms have been removed.}
+\end{figure}
+
 
 As we can see from the example plot above, there are clearly linear correlations among features for our example playlist.
 
@@ -229,7 +231,11 @@ A third approach to finding candidate songs given a playlist context would be to
 \subsection{Subspace method}
 A last approach for track candidate selection would be to use the subspace method. Given that the principal components for a playlist, describing the variance of that playlist suited for a playlist context, are at hand, one can simply treat each track as a vector rather than a point. Each vector can then be projected into the principal component space for that playlist context. The underlying assumption is then that points that have a low relative change in magnitude under projection are well described by the characteristics defining the playlist context, and thus good candidates. Tracks that are not well described by the playlist context characteristics on the other hand, will change under projection and will therefore also have a high relative change in magnitude. As all tracks will be projected this is actually a ranking algorithm where tracks with lower relative change in magnitude will have a higher rank and tracks with higher change in magnitude a lower rank. To illustrate how the subspace method works lets look at the following picture:
 
+\begin{figure}
 \includegraphics[scale=0.6]{images/subspaceIllustrationBW0.png}
+\caption{Illustration of how points relate to principal component space under projection of the subspace method.}
+\end{figure}
+
 
 Here two playlists are illustrated in the two dimensional plane and their first principle component is the line through the points. As can be seen projecting the point into the principal component space of plaaylist 1 means a lower change of magnitude for the point than projecting the point into the principal component space of playlist 2. This means that the point, representing a track, provides a better fit for playlist 1 than playlist 2.
 
@@ -247,13 +253,23 @@ After studying linear relationships among features within playlists the study wa
 \section{Playlist Comparison}
 As principal components were chosen to describe playlists, it is reasonable to assume that if principal components analysis works well for describing playlist characteristics, then the same approach should also work well for comparing playlists. Playlists were compared pairwise. To compare two playlists all eigenvectors from each playlist were multiplied by each other. If we think of playlist A as  \[A = U_1 \lambda_1 U_1^T\] and of antother playlist B as \[B = U_2 \lambda_2 U_2^T\] then the operation performed to compare them can be seen as \[M = U_1 U_2^T\] where M is the resulting matrix from the comparison. By doing this a measure proportional to the cosine measure of vector similarity for each pair of vectors was obtained. 
 
-The problem with this approach is that it gives an unbalanced comparison. By simply looking at the similarity of eigenvectors implies that eigenvectors corresponding to low eigenvalues have the same importance as eigenvectors corresponding to high eigenvalues. This means that components explaining a high part of the characteristics of a playlist are regarded an equal importance as components explaining a low part of playlist characteristics. To remedy this problem the cosine score between eigenvectors from each playlist was scaled by the square root of the product of the corresponding eigenvalues, which mathematically can be formulated as  \[M = U_1 \sqrt{\lambda_1} \sqrt{\lambda_2} U_2^T \] The result obtained from this multiplication was a square matrix. To rank the similarity between these matrices some type of transformation from a matrix to a single value is needed. The initial idea was to aggregate the entries of the matrix, but an aggregated value does not tell which values that have led up to the aggregated result. Therefore by simple adding values of the matrix one would not know if the similarity comes from dot products between vectors corresponding to high or low eigenvalues. Therefore it was choosen to only take the trace of the matrix into consideration. Three different approaches were taken: the sum of the values of the diagonal, the absolute value of the sum of the diagonal and the sum of the absolute values of the matrix diagonal. These approaches were taken to compare 28 playlists among themselves.
+The problem with this approach is that it gives an unbalanced comparison. By simply looking at the similarity of eigenvectors implies that eigenvectors corresponding to low eigenvalues have the same importance as eigenvectors corresponding to high eigenvalues. This means that components explaining a high part of the characteristics of a playlist are regarded an equal importance as components explaining a low part of playlist characteristics. To remedy this problem the cosine score between eigenvectors from each playlist was scaled by the square root of the product of the corresponding eigenvalues, which mathematically can be formulated as  \[M = U_1 \sqrt{\lambda_1} \sqrt{\lambda_2} U_2^T \] The result obtained from this multiplication was a square matrix. To rank the similarity between these matrices some type of transformation from a matrix to a single value is needed. The initial idea was to aggregate the entries of the matrix, but an aggregated value does not tell which values that have led up to the aggregated result. Therefore by simple adding values of the matrix one would not know if the similarity comes from dot products between vectors corresponding to high or low eigenvalues. Therefore it was chosen to only take the trace of the matrix into consideration. Three different approaches were taken: the sum of the values of the diagonal, the absolute value of the sum of the diagonal and the sum of the absolute values of the matrix diagonal. These approaches were taken to compare 28 playlists among themselves.
 
-\includegraphics[scale=0.6]{images/sum.png}
+\begin{figure}
+\includegraphics[scale=0.5]{images/sum.png}
+\caption{Hierarchical clustering of playlists where the aggregated measure of the weighted dot product matrix is taken by the sum of the matrix diagonal}
+\end{figure}
 
-\includegraphics[scale=0.6]{images/absSum.png}
+\begin{figure}
+\includegraphics[scale=0.5]{images/absSum.png}
+\caption{Hierarchical clustering of playlists where the aggregated measure of the weighted dot product matrix is taken by the absolute value of sum of the matrix diagonal}
+\end{figure}
 
-\includegraphics[scale=0.6]{images/sumAbs.png}
+\begin{figure}
+\includegraphics[scale=0.5]{images/sumAbs.png}
+\caption{Hierarchical clustering of playlists where the aggregated measure of the weighted dot product matrix is taken by the sum of the absolute values of the matrix diagonal}
+\end{figure}
+
 
 As can be seen summing the absolute values of the matrix diagonal provides a good clustering of similar playlists in the data set used. From a theoretical perspective summing the absolute values is also the method that makes the most sense. Eigenvectors from the covariance matrix explains the direction of variance, but it does not really matter if the variance is seen as going from A to B or from B to A. Hence the direction of eigenvectors from a playlist feature covariance matrix does not really matter. If the direction of eigenvectors do not matter then the resulting values of the matrix diagonal, provided by multiplying the weighted eigenvectors from two different playlist covariance matrices, do not matter either and it makes sense to use the sum of absolute values as an aggregated measure is used.
 
@@ -275,35 +291,42 @@ Locality Sensitive Hashing performs a good way of segmenting a high dimensional 
 Evaluating a generated playlist is a difficult task as there is no known ground truth for what a good playlist is. Even when asking normal persons or domain experts opinions about what consists a good playlist are likely to differ. There are of course sanctioned methods for evaluating data when features are present, using the cosine distance as an evaluation metric is one such approach. However using such as metric presents new problems. If the cosine distance, for example, is used for evaluation this would imply that the cosine distance also should also be used for the model. But if the evaluation metric and the objective function one tries to minimize are the same is there really an actual evaluation framework present or is the entire evaluation pipeline simply a tautology? Imagining the opposite is not compelling either. If one objective function is minimized by the model and another is used for evaluation one finds oneself in a situation of comparing apples and oranges, which is unlikely to be desired. Finding a way to evaluate generated playlists is without doubt a difficult task, but some metric is still needed as a proxy.
 The first evaluation approach choosen for evaluating generated playlists finds its roots in the method of describing playlist similarity described in the methods section. 
 
-\includegraphics[scale=0.6]{images/sumAbsAgglHierClust-better.png}
+\begin{figure}
+\includegraphics[scale=0.5]{images/sumAbsAgglHierClust-better.png}
+\caption{This image shows the clustering used as a base for calculating precision. Clusters consisting of one single playlist were not used for evaluation.}
+\end{figure}
+
 
 Based on the method of comparing playlists by taking the dot product of the principal components of two playlists, weighting by eigen values and transforming the resulting matrix into a value by summing the absolute values of the trace of the matrix an additional hierarchical clustering step can be added to create meaningful playlists clusters, as seen in the picture above. As these clusters make up a sensible segmentation of playlists they where used as a base for evaluation. When the subspace method was applied to rank candidate songs for a seed playlist all songs that originates from a playlist within the same cluster as the seed playlist were considered true positives. All other songs were considered false positives. For the evaluation task a subset of data was used were only the tracks of the seven clusters consisting of more than one playlist from the figure above were used and pre-filtering was made by using approximate nearest neighbours with an euclidean distance measure. The approximate twenty nearest neighbours were used and the number of trees in each approximate nearest neighbour forest was varied. This is a non-optimal way of using approximate nearest neighbours as the proper way would mean to select a by magnitude larger number of neighbours than actually needed due to the fact that the method is an approximate. The reason for not doing doing so is that as small data set was used for evaluation using the two-hundred nearest neighbours would mean that the pre-filtering step would loose its effect as almost the entire data set would pass through pre-filtering. 
 Precision was calculated for the ten, twenty and thirty top ranked songs. Calculating precision this way is a conservative measure as songs from playlists outside the cluster also might be good candidates. 
 To give a reference to how the model performs a random sample of songs after the approximate nearest neighbour step was also used were precision was calculated the same way as for the model.
 
 \section{Comparing Model to Baseline}
-Model p@10
-\includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/model/p10_0outlierRmvd.png}
 
-Random p@10
-\includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/random/p10_0outlierRmvd.png}
+\begin{figure}
+\includegraphics[scale=0.08]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/model/p10_0outlierRmvd.png}
+\includegraphics[scale=0.08]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/random/p10_0outlierRmvd.png}
+
+\caption{Images showing how the model, left image, performs compared to the baseline, right image, for precision at 10.}
+\end{figure}
 
 
-Model p@20
-\includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/model/p20_0outlierRmvd.png}
+\begin{figure}
+\includegraphics[scale=0.08]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/model/p20_0outlierRmvd.png}
+\includegraphics[scale=0.08]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/random/p20_0outlierRmvd.png}
+\caption{Images showing how the model, left image, performs compared to the baseline, right image, for precision at 20.}
+\end{figure}
 
-Random p@20
-\includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/random/p20_0outlierRmvd.png}
-
-Model p@30
-\includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/model/p30_0outlierRmvd.png}
-
-Random p@30
-\includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/random/p30_0outlierRmvd.png}
+\begin{figure}
+\includegraphics[scale=0.08]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/model/p30_0outlierRmvd.png}
+\includegraphics[scale=0.08]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/random/p30_0outlierRmvd.png}
+\caption{Images showing how the model, left image, performs compared to the baseline, right image, for precision at 30.}
+\end{figure}
 
 As can be seen the model outperforms the baseline in many cases by an increase in precision hundred percent or more and never performs less than twenty five percent better than the baseline, on average. 
 When increasing the number of trees in the approximate nearest neighbour pre-filtering step while using the model the lower limit of variance goes down. This implies that using approximate nearest neighbours as pre-filtering discriminates tracks that are true positives. To scrutinize this lets look more closely at the data and see how the data points are distributed along the axis of variance.
 
+\begin{figure}
 Model@10
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p10_0outlierRmvd.png}
 
@@ -313,8 +336,11 @@ Model@20
 Model@30
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p30_0outlierRmvd.png}
 
+\end{figure}
+
 What can be seen is that there is only one point that causes the lower tail in variance for each boxplot, this point is a result of the same playlist for each boxplot and is also the overall lowest performing playlist. This point can therefore be threated as an outlier as it is not well described by the model. Removing this outlier yields the following result.
 
+\begin{figure}
 Model@10 1 outlier removed
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p10_1outlierRmvd.png}
 
@@ -323,71 +349,78 @@ Model@20 1 outlier removed
 
 Model@30 1 outlier removed
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p30_1outlierRmvd.png}
+\end{figure}
+
 
 With the outlier removed the lower tail of variance is stable or decreasing as the number of trees in the pre-filtering step increase. As increasing the number of trees while pre-filtering leads to a higher discrimination the plausible decrease in variance is coherent with theory. There is also a fluctuation in precision as the number of trees varies, but without a clear trend. Removing one outlier also alters how the precision varies, what this entails is that the amount of data used for these experiments is not enough to draw conclusions regarding a trend in precision as a function of the number of trees used in pre-filtering. The fluctuations in precision are to be regarded as pecularities in the data set rather than ground for generalized conclusions as no clear trend can be spotted.
 
 \section{Confusions}
 As can be seen in the image showing the playlist clusters there is often a high correlation between a playlist inside a cluster and another playlist outside the cluster, as for example between the playlists \textit{Digster SVENSK HIPHOP} and \textit{Dance Workout}. Using precision by only considering tracks from playlists inside the clusters as true positives is therefore a conservative measure and the actual results might therefore be better than what the precision results entail. To quantify and investigate to what extent false postives come from closely related playlists histograms of the rank of playlists from which the false postive tracks originated were made. Here the rank is the rank of how highly ranked the playlist the false positive sample originated from was related to the seed playlist for the entire data set. That is, for each playlist in the data set a ranking of all playlists in terms of similarity in their principal component spaces, as performed when comparing playlists earlier, is made. Once this ranking is made for each playlist, all tracks classified as false positives when calculating the precision for a seed playlist are mapped to the rank of the playlist, from which the false positive originates, when compared to the seed playlist. Once this is done all these ranks are saved. To visualize the distribution of these ranks histograms were made for all number of trees for the approximate nearest neighbour pre-filtering step.
 
+\begin{figure}
 1 tree
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot1.png}
-
-
+\includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot1.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum1.png}
+\end{figure}
 
-
+\begin{figure}
 3 trees
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot3.png}
-
-
+\includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot3.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum3.png}
+\end{figure}
 
+\begin{figure}
 5 trees
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot5.png}
-
-
+\includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot5.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum5.png}
+\end{figure}
 
+\begin{figure}
 10 trees
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot10.png}
-
-
+\includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot10.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum10.png}
+\end{figure}
 
+\begin{figure}
 20 trees
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot20.png}
-
-
+\includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot20.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum20.png}
+\end{figure}
 
+\begin{figure}
 30 trees
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot30.png}
-
-
+\includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot30.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum30.png}
+\end{figure}
 
+\begin{figure}
 50 trees
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot50.png}
-
-
+\includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot50.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum50.png}
+\end{figure}
 
 There is a similar behaviour for all number of trees in the approximate nearest neighbour forest where roughly fifty percent of all false positives come from the seven playlists most similar to the seed playlist. This result show that to a high extent tracks regarded as false positives come from playlists that are ranked as being similar to the seed playlist. It is therefore reasonable to believe that precision calculated as tracks coming from playlists in the same cluster is a conservative measure and that the actual results are better than what the precision measure reveals.
 
 \section{Qualitative Evaluations}
 To find out if the results from evaluating the rank of playlists from which the confused false positives originated actually means that the tracks selected as candidate songs really are good candidates to a higher extent than what the precision metric reveals and to get an idea of how the selected candidate songs sounded to the human ear qualitative evaluations were performed. Three playlists for which the seed playlists Old School Hip Hop, Old School Rock and Old School Heavy were selected. The reason for selecting these playlists are that they contributed to uniformity of the test as they all were \textit{"Old School"} and all were genre playlists. Also Hip Hop was seen to precision a high performing playlist, Rock middle performing and Metal low performing so to see how well the performance of the quantitative measures responded to listeners opinions. To have a reference point both playlists with songs selected by the model as well as songs from the original curated playlists were selected. To haven an even distribution of biases from the persons listening to the playlists new playlists were created where ten songs in order came from the top ranked candidate songs by the model and the other ten songs, also in order, were the first ones in the seed playlist. Users were then presented with these three playlists and were asked how well the first or last ten songs matched the theme, how many outliers there were and how well the songs matched the theme with outliers removed.
 
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Model.png}
+\begin{figure}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Model.png}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Reference.png}
+\caption{Results from qualitative evaluation for Hip Hop. Performance of model to the left and the manually curated playlist to the right}
+\end{figure}
 
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Reference.png}
+\begin{figure}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Model.png}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Reference.png}
+\caption{Results from qualitative evaluation for Rock. Performance of model to the left and the manually curated playlist to the right}
+\end{figure}
 
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Model.png}
-
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Reference.png}
-
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Model.png}
-
-\includegraphics[scale=0.6]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Reference.png}
+\begin{figure}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Model.png}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Reference.png}
+\caption{Results from qualitative evaluation for Metal. Performance of model to the left and the manually curated playlist to the right}
+\end{figure}
 
 As can be seen form the user evaluations surprisingly the tracks from the model were ranked higher than those taken from the curated playlists for both Hip Hop and Rock. The model selected tracks for metal were ranked lower, but the users rankings confirmed the notion that precision as used for the quantitative evaluations was a conservative measure as users found less outliers than there were false positives from the quantitative evaluation.
 
@@ -396,16 +429,21 @@ One reason to why time complexity is important in the field of Machine Learning 
  As can be easily understood analyzing time complexity within the machine learning field is essential to understand the scalability of a machine learning algorithm. An algorithm that grows faster than linear with data quickly becomes unfeasible as the amount of data used grows large. In the case of Spotify the number of tracks in the song library and the number of users are in the magnitude of millions or tens of millions which means that even a linear run-time might be too slow to be practically usable.
  
 \section{Time Complexity of Model}
-The first step in the model is to create a covariance matrix from the features of tracks in the seed playlist. The computational complexity of creating a covariance matrix is $O(ND^2)$ where \textit{N} is the number of tracks in the playlist and \textit{D} is the number of features that represent each track\cite{kwatra2010fast}. Once the covariance matrix is created an eigen value decomposition is needed to get an orthogonal representation of features in the data, the time complexity for the eigen value decomposition is in the magnitude of $O(D^3)$ where \textit{D} is the number of rows, or columns due to symmetry, in the covariance matrix which is equal to the number of dimensions of features for each playlist track\cite{pan1999complexity}. After the eigendecomposition a projection matrix is needed to project tracks into the principal component space of a seed playlist. To create the projection matrix one matrix inversion with complexity of $O(D^3)$ and three matrix multiplications, also with time complexity of $O(D^3)$ are needed, with a resulting time complexity of creating the projection matrix of $O(D^3)$. To project each track into the principal component space a matrix vector multiplication is needed with time complexity of $O(D^2)$ and this is done for each track which yields a resulting time complexity of $O(ND^2)$ where \textit{N} are the number of tracks to be projected. The calculation of relative change in magnitude requires calculating the length of each track represented as a vector which includes a squared root operation and thus has the time complexity of $O(D^2)$. Creating a covariance matrix, eigendecompose it and creating a projection matrix does only have to be done once and as the number of tracks in a playlist does not exceed the magnitude of hundreds and the number of dimensions for each track is fixed the steps of the model before projecting tracks can be regarded as constant operations. Using approximate nearest neighbours for one track is a constant time operation and needs to be done for each track in the seed playlist which gives a resulting time complexity of \textit{O(N)} where \textit{N} is the number of tracks in the seed playlist. The resulting complexity of the model thus becomes $O(nD^2)$ where \textit{n} are the number of tracks obtained by using approximate nearest neighbours and \textit{n << N} where \textit{N} is the total number of tracks in the music library. This yields a resulting time complexity which is sublinear in the number of tracks and quadratic in the number of features.
+Computational complexity theory is about analyzing the amount of resources needed to solve a particular problem and classifying problems according to how difficult they are to solve. Resources needed to solve a problem generally mean running time or memory, but could also include randomness or communication. 
+
+Analyzing the time it takes for an algorithm to solve a problem is also called time complexity. Time complexity is a quantification of the time needed to solve a problem as a function of the length or size of the input. A common way to describe time complexity is the asymptotic behaviour of running time needed as a function of input, also called \textit{Big-O} notation. Time complexity analysis with \textit{Big-O} notation takes the dominant terms into regard as input data grows towards infinity. For example if we have a problem that for the length of input \textit{n} requires $(2n)^2$ operations the problem has a time complexity of $O(n^2)$. \textit{Big-O} notation assumes that some operations called trivial operations take a constant time to perform, \textit{O(1)}, and if \textit{n} such operations are performed the time complexity becomes \textit{O(n)}. All operations that do not grow with the size of input data are dropped using \textit{Big-O} notation. For example if an algorithm needs a cubic number of operations for each input data term and an additional thousand operations that do not change with the size of input data the total amount of operations needed is $n^3 + 1000$ which becomes $O(n^3)$
+
+The first step in the model is to create a covariance matrix from the features of tracks in the seed playlist. The computational complexity of creating a covariance matrix is $O(ND^2)$ where \textit{N} is the number of tracks in the playlist and \textit{D} is the number of features that represent each track\cite{kwatra2010fast}. Once the covariance matrix is created an eigen value decomposition is needed to get an orthogonal representation of features in the data, the time complexity for the eigen value decomposition is in the magnitude of $O(D^3)$ where \textit{D} is the number of rows, or columns due to symmetry, in the covariance matrix which is equal to the number of dimensions of features for each playlist track\cite{pan1999complexity}. After the eigendecomposition a projection matrix is needed to project tracks into the principal component space of a seed playlist. To create the projection matrix one matrix inversion with complexity of $O(D^3)$ and three matrix multiplications, also with time complexity of $O(D^3)$ are needed, with a resulting time complexity of creating the projection matrix of $O(D^3)$. To project each track into the principal component space a matrix vector multiplication is needed with time complexity of $O(D^2)$ and this is done for each track which yields a resulting time complexity of $O(ND^2)$ where \textit{N} are the number of tracks to be projected. The calculation of relative change in magnitude requires calculating the length of each track represented as a vector which includes a squared root operation and thus has the time complexity of $O(D^2)$. Creating a covariance matrix, eigendecompose it and creating a projection matrix does only have to be done once and as the number of tracks in a playlist does not exceed the magnitude of hundreds and the number of dimensions for each track is fixed the steps of the model before projecting tracks can be regarded as constant operations. Using approximate nearest neighbours for one track is a constant time operation and needs to be done for each track in the seed playlist which gives a resulting time complexity of \textit{O(N)} where \textit{N} is the number of tracks in the seed playlist. The resulting complexity of the model thus becomes $O(nD^2)$ where \textit{n} are the number of tracks obtained by using approximate nearest neighbours and \textit{n << N} where \textit{N} is the total number of tracks in the music library. This yields a resulting time complexity which is sublinear in the number of tracks and quadratic in the number of features. What is further interesting is that the projection of tracks into subspaces can be done in parallel.
 
 \chapter{Discussion and Future Work}
 
 \section{Discussion}
-Using playlists is an attractive means of consuming music. This can be shown by the fact that in the Spotify music library the number of songs is in magnitude of millions but the number of playlists in billions. It is therefore desirable for a music provider to be able to automatically generate playlists adapted to a users distinct taste. One way of doing this is to generate playlists from an initial seed playlist which the user can specify.
- The method used in this thesis provides a scalable approach for a step on the way of creating automatically generated playlists of high quality, merely the selection of candidate songs for a generated playlist. The method has proven to perform better than a baseline in form of approximate nearest neighbours for candidate song selection. Quantitative results also imply that the actual quality of songs selected for playlist generation is better than the one measured by calculating precision. Qualitative assesments further strengthens this hypothesis. The qualitative assesments made ranked the generated playlists higher than the ones from where the representation was learned in two out of three cases. The third cased consisted of a playlist with the second lowest precision in the entire experiment and the evaluations made qualitatively suggest a more than a hundred percent higher actual precision of that playlist than what the precision measure entails. These results together suggest that learning a playlist representation in an eigenbased way is an effective approach for playlist generation together with approximate nearest neighbour pre-filtering. Results also confirm that the initial assumption of regarding a playlist as a good mix of songs and therefore regarding variance as a important factor to distinguish playlist characteristics is a valid approach. Lastly, as rankings of false positives for the precision measure to a high extent came from similar playlists it is also reasonable to assume that the performance of the model would be even better should a bigger data set with more relevant tracks for each seed playlist be present. 
+Using playlists is an attractive means of consuming music. This can be shown by the fact that in the Spotify music library the number of songs is in magnitude of millions but the number of playlists is in magnitude of billions. It is therefore desirable for a music provider to be able to automatically generate playlists adapted to a users distinct taste. One way of doing this is to generate playlists from an initial seed playlist which the user can specify.
+ The method used in this thesis provides a scalable and parallelizable approach for a step on the way of creating automatically generated playlists of high quality, merely the selection of candidate songs for a generated playlist. The method has proven to perform better than a baseline in form of random sampling from approximate nearest neighbours for candidate song selection. The baseline might seem trivial at a glance, but these results imply that learning a playlist representation present a superior approach for playlist song selection than neighbourhood-based approaches. Results therefore confirm that the initial assumption of regarding a playlist as a good mix of songs and therefore regarding variance as a important factor to distinguish playlist characteristics is a valid approach.
+ Quantitative results also imply that the actual quality of songs selected for playlist generation is better than the one measured by calculating precision. Qualitative assesments further strengthens this hypothesis. The qualitative assesments made ranked the generated playlists higher than the ones from where the representation was learned in two out of three cases. The third cased consisted of a playlist with the second lowest precision in the entire experiment and the evaluations made qualitatively suggest a more than a hundred percent higher actual precision of that playlist than what the precision measure entails. These results together suggest that learning a playlist representation in an eigenbased way is an effective approach for playlist generation together with approximate nearest neighbour pre-filtering. Lastly, as rankings of false positives for the precision measure to a high extent came from similar playlists it is also reasonable to assume that the performance of the model would be even better should a bigger data set with more relevant tracks for each seed playlist be present. 
 \section{Future Work}
 \textit{So many things to do and so little time} \\The Joker\\\\
-A given first step of continuing the work presented in this thesis would be to also take the ordering of songs, once selected as good candidate for playlist generation, into consideration. It would also be interesting to study how the amount of variance captured when creating a principal component space for a playlist would relate to the quality of the songs selected. Feature selection has been outside the scope of this thesis, but it is very likely that the creation of better features also would make the model perform better. The use of a larger data set for better evaluation is also of interest. Lastly, and what seems like the most fun, would be to consider other covariance functions than the linear one and to use a model, such as probabilistic principal component analysis, which apart from covariance also can take location, such as in the form of the mean, into consideration.
+A given first step of continuing the work presented in this thesis would be to also take the ordering of songs, once selected as good candidate for playlist generation, into consideration. It would also be interesting to study how the amount of variance captured when creating a principal component space for a playlist would relate to the quality of the songs selected. Feature selection has been outside the scope of this thesis, but it is very likely that the creation of better features would make the model perform better. One particularly interesting feature that has been lacking for this thesis is time, which is an important factor in the music context. The use of a larger data set for better evaluation is also of interest as this would give a better generalizability than what could be fitted into the scope of this thesis. Lastly, and what seems like the most fun, would be to consider other covariance functions than the linear one and to use a model, such as probabilistic principal component analysis, which apart from covariance also can take location, such as in the form of the mean, into consideration intrinsically.
 \bibliography{refList}
 \bibliographystyle{plain}
 
