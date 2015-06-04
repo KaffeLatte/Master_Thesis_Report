@@ -13,6 +13,19 @@ Yoshua Bengio, Aaron Courville, and Pascal Vincent.
 \newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
   on}, 35(8):1798--1828, 2013.
 
+\bibitem{beyer1999nearest}
+Kevin Beyer, Jonathan Goldstein, Raghu Ramakrishnan, and Uri Shaft.
+\newblock When is "nearest neighbor" meaningful?
+\newblock In {\em Database Theory?ICDT'99}, pages 217--235. Springer, 1999.
+
+\bibitem{breese1998empirical}
+John~S Breese, David Heckerman, and Carl Kadie.
+\newblock Empirical analysis of predictive algorithms for collaborative
+  filtering.
+\newblock In {\em Proceedings of the Fourteenth conference on Uncertainty in
+  artificial intelligence}, pages 43--52. Morgan Kaufmann Publishers Inc.,
+  1998.
+
 \bibitem{cortes1995support}
 Corinna Cortes and Vladimir Vapnik.
 \newblock Support-vector networks.
