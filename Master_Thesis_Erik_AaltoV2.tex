@@ -22,17 +22,13 @@
 \maketitle
 \selectlanguage{english}
 \begin{abstract}
-  This is a skeleton for KTH theses. More documentation
-  regarding the KTH thesis class file can be found in
-  the package documentation.
+  Spotify is currently the worlds leading music streaming service. As the leader in music streaming the task of providing listeners with music recommendations is vital for Spotify. Listening to playlists is a popular way of consuming music, but traditional recommender systems tend to focus on suggesting songs, albums or artists rather than providing consumers with playlists generated for their needs. This thesis presents a scalable and generalizeable approach to music recommendation that performs song selection for the problem of playlist generation. The approach selects tracks related to a playlist theme by finding the characterizing variance for a seed playlist and projects candidate songs into the corresponding subspace. Quantitative results shows that the model outperforms a baseline which is taking the full variance into account. By qualitative results the model is also shown to outperform professionally curated playlists in some cases.
 
 
 \end{abstract}
 \clearpage
 \begin{foreignabstract}{swedish}
-  Denna fil ger ett avhandlingsskelett.
-  Mer information om \LaTeX-mallen finns i
-  dokumentationen till paketet.
+  Spotify \"{a}r v\"{a}rldens ledande service f\"{o}r musikstreaming. Som ledare inom musikstreaming \"{a}r musikrekommendation ett centralt omr{\aa}de f\"{o}r Spotify. Att lyssna p{\aa} spellistor \"{a}r ett popul\"{a}rt s\"{a}tt att konsumera musik, men traditionella system f\"{o}r musikrekommendation fokuserar snarare p{\aa} rekommendation av l{\aa}tar, album eller artister \"{a}n att tillhandah{\aa}lla spellistor genererade efter konsumenters behov. Denna avhandling presenterar en skalbar och generaliserbar metod f\"{o}r musikrekommendation f\"{o}r att v\"{a}lja l\"{a}mpliga l{\aa}tar f\"{o}r spellistegenerering. Metoden v\"{a}ljer l\"{a}mpliga l{\aa}tar genom att hitta den varians som karakteriserar den spellista man vill anv\"{a}nda som bas f\"{o}r generering och projicerar sedan kanididatl{\aa}tar ner i motsvarande delrymd. Kvantitativa resultat visar att modellen presterar b\"{a}ttre \"{a}n en referensmetod som anv\"{a}nder den fulla variansen. Kvalitativa resultat visar att modellen i vissa fall presterar b\"{a}ttre \"{a}n professionellt kurerade spellistor.
 
 \end{foreignabstract}
 \clearpage
@@ -253,9 +249,6 @@ one sees that covariance only takes the relative difference into consideration. 
 
 Further, the subspace method is a linear transformation and it can be questioned if a linear transformation is powerful enough to describe the necessary mappings.
 
-\section{First Track Manifold}
-After studying linear relationships among features within playlists the study was extended to see if there were linear relationships among the ordering of songs as well. To do this the subspace method was used again. But instead of extracting the principal components for the variance of a playlist, the principal components describing the variance of all the start songs of all curated playlists were extracted. Once this was made a sample of songs from the curated playlist data set were projected into the first track manifold space created by the principal components of the first tracks. This was made to see if start tracks would have higher ranking, i.e. lower relative change in magnitude, than other tracks.
-
 \section{Playlist Comparison}
 As principal components were chosen to describe playlists, it is reasonable to assume that if principal components analysis works well for describing playlist characteristics, then the same approach should also work well for comparing playlists. Playlists were compared pairwise. To compare two playlists all eigenvectors from each playlist were multiplied by each other. If we think of playlist A as  \[A = U_1 \lambda_1 U_1^T\] and of antother playlist B as \[B = U_2 \lambda_2 U_2^T\] then the operation performed to compare them can be seen as \[M = U_1 U_2^T\] where M is the resulting matrix from the comparison. By doing this a measure proportional to the cosine measure of vector similarity for each pair of vectors was obtained. 
 
@@ -285,7 +278,7 @@ Based on the notion that calculating distances in high dimensional vector spaces
 
 \begin{figure}
 \includegraphics[scale=0.5]{images/LSH.png}
-\caption{Illustration of Locality Sensitive Hashing in the two dimensional case}
+\caption{Illustration of Locality Sensitive Hashing}
 \end{figure}
 
 Locality Sensitive Hashing performs a good way of segmenting a high dimensional space into clusters. But scalability still remains an issue. One way of approximating the random subspace projections made by LSH is to deploy the use of random hyperplanes for separation. Random hyperplane segmentation for approximate nearest neighbours can be implemented by the use of several separating random hyperplanes. Each hyperplane is treated as a node in a binary tree as it separates all points into two categories. The segmentation made by one such tree is not necessarily optimal, but with several such trees an approximate nearest neighbour forest is obtained. Theoretically a higher number of trees in an approximate nearest neighbour forest should provide better segmentation of points up to a point on the magnitude of the number of relevant features in the data. Increasing the number of trees beyond this point would theoretically lead to a overly harsh discrimination and thus a less optimal segementation of data points. The time to retrieve the nearest neighbours of one point from approximate nearest neighbours is a constant time operation once the indexing of points is done. Thus by adding a approximate nearest neighbour pre-filtering step to the subspace method implies that subspace projections given an initial seed playlist only needs to be done for a subset of points from the whole data set.
@@ -409,21 +402,22 @@ There is a similar behaviour for all number of trees in the approximate nearest 
 To find out if the results from evaluating the rank of playlists from which the confused false positives originated actually means that the tracks selected as candidate songs really are good candidates to a higher extent than what the precision metric reveals and to get an idea of how the selected candidate songs sounded to the human ear qualitative evaluations were performed. Three playlists for which the seed playlists Old School Hip Hop, Old School Rock and Old School Heavy were selected. The reason for selecting these playlists are that they contributed to uniformity of the test as they all were \textit{"Old School"} and all were genre playlists. Also Hip Hop was seen to precision a high performing playlist, Rock middle performing and Metal low performing so to see how well the performance of the quantitative measures responded to listeners opinions. To have a reference point both playlists with songs selected by the model as well as songs from the original curated playlists were selected. To haven an even distribution of biases from the persons listening to the playlists new playlists were created where ten songs in order came from the top ranked candidate songs by the model and the other ten songs, also in order, were the first ones in the seed playlist. Users were then presented with these three playlists and were asked how well the first or last ten songs matched the theme, how many outliers there were and how well the songs matched the theme with outliers removed.
 
 \begin{figure}
-\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Model.png}
-\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/HipHop_Reference.png}
-\caption{Results from qualitative evaluation for Hip Hop. Performance of model to the left and the manually curated playlist to the right}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/hiphop_1_5.png}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/hiphop_1_10.png}
+\caption{Results from qualitative evaluation for Hip Hop. The image to the left shows the performance of how the tracks in the playlist for qualitative evaluation matches the playlist theme for both the model and the reference playlist. First column shows how well the tracks in the model playlist matches the theme, second column how well the tracks from the model matches the theme with outliers removed. The third and fourth column show the same values for the reference playlist. The image to the right shows the number of outliers found for the playlist from the model or reference respectively. As can be seen the model slightly outperforms the reference. The most probable reason for one person spotting eight outliers in the model is that the user saw one outlier and that was track number eight. Feedback after the qualitative evaluation confirms this.}
 \end{figure}
 
 \begin{figure}
-\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Model.png}
-\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Rock_Reference.png}
-\caption{Results from qualitative evaluation for Rock. Performance of model to the left and the manually curated playlist to the right}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/rock_1_5.png}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/rock_1_10.png}
+\caption{Results from qualitative evaluation for Rock. The image to the left shows the performance of how the tracks in the playlist for qualitative evaluation matches the playlist theme for both the model and the reference playlist. First column shows how well the tracks in the model playlist matches the theme, second column how well the tracks from the model matches the theme with outliers removed. The third and fourth column show the same values for the reference playlist. The image to the right shows the number of outliers found for the playlist from the model or reference respectively. As can be seen the model outperforms the reference. A reasonable explanation to the low performance of the reference could be that experts designing the playlist and the users evaluating the playlist have different opinions about what rock is. Is the song \textit{Son of a preacher man} that was present among the reference songs old school rock or pop for example.}
 \end{figure}
 
 \begin{figure}
-\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Model.png}
-\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/Metal_Reference.png}
-\caption{Results from qualitative evaluation for Metal. Performance of model to the left and the manually curated playlist to the right}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/metal_1_5.png}
+\includegraphics[scale=0.5]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/metal_1_10.png}
+
+\caption{Qualitative results for the Metal playlists. The image to the left shows the performance of how the tracks in the playlist for qualitative evaluation matches the playlist theme for both the model and the reference playlist. First column shows how well the tracks in the model playlist matches the theme, second column how well the tracks from the model matches the theme with outliers removed. The third and fourth column show the same values for the reference playlist. The image to the right shows the number of outliers found for the playlist from the model or reference respectively. As can be seen the reference clearly outperforms the model. As one user misunderstood the outlier scale for Hip Hop it is reasonable to assume that the one person ranking the number of outliers for the metal playlist having commited the same mistake, but as opinions about music differ we cannot be sure about this.}
 \end{figure}
 
 As can be seen form the user evaluations surprisingly the tracks from the model were ranked higher than those taken from the curated playlists for both Hip Hop and Rock. The model selected tracks for metal were ranked lower, but the users rankings confirmed the notion that precision as used for the quantitative evaluations was a conservative measure as users found less outliers than there were false positives from the quantitative evaluation.
