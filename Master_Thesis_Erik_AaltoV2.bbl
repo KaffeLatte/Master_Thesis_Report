@@ -59,6 +59,11 @@ Yifan Hu, Yehuda Koren, and Chris Volinsky.
 \newblock In {\em Data Mining, 2008. ICDM'08. Eighth IEEE International
   Conference on}, pages 263--272. IEEE, 2008.
 
+\bibitem{koller2009probabilistic}
+Daphne Koller and Nir Friedman.
+\newblock {\em Probabilistic graphical models: principles and techniques}.
+\newblock MIT press, 2009.
+
 \bibitem{kwatra2010fast}
 Vivek Kwatra and Mei Han.
 \newblock Fast covariance computation and dimensionality reduction for

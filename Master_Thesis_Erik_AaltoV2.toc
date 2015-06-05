@@ -10,9 +10,9 @@
 \contentsline {section}{\numberline {2.1}Collaborative Filtering}{3}
 \contentsline {section}{\numberline {2.2}Content Based Approaches}{6}
 \contentsline {section}{\numberline {2.3}Hybrid Systems}{7}
-\contentsline {section}{\numberline {2.4}Previous Work}{8}
+\contentsline {section}{\numberline {2.4}Playlist Generation}{8}
 \contentsline {subsection}{\numberline {2.4.1}Probabilistic Graphical Models for Playlist Generation}{8}
-\contentsline {subsection}{\numberline {2.4.2}Gaussian Processes for Playlist Generation}{8}
+\contentsline {subsection}{\numberline {2.4.2}Gaussian Processes for Playlist Generation}{10}
 \contentsline {chapter}{\chapternumberline {3}Representation Learning}{11}
 \contentsline {section}{\numberline {3.1}Principal Component Analysis}{12}
 \contentsline {chapter}{\chapternumberline {4}Methodology}{15}

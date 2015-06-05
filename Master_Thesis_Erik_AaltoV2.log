@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.7)  5 JUN 2015 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.7)  5 JUN 2015 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1069,18 +1069,24 @@ Package pdftex.def Info: images/colFiltMat.png used on input line 69.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4 <./images/colFiltMat.png>] [5] [6] [7]
-Overfull \hbox (0.83598pt too wide) in paragraph at lines 132--133
-\T1/lmr/m/n/10.95 Earlier at-tempts of playlist gen-er-a-tion has been made by 
-Mi-crosoft Re-search. Ragno,
- []
+<images/UGM.png, id=77, 496.85625pt x 232.87pt>
+File: images/UGM.png Graphic file (type png)
+ <use images/UGM.png>
+Package pdftex.def Info: images/UGM.png used on input line 136.
+(pdftex.def)             Requested size: 198.73897pt x 93.14633pt.
+ [8 <./images/UGM.png>] <images/DGM.png, id=82, 516.93124pt x 237.88875pt>
+File: images/DGM.png Graphic file (type png)
 
-[8] [9] [10
-
-]
+<use images/DGM.png>
+Package pdftex.def Info: images/DGM.png used on input line 146.
+(pdftex.def)             Requested size: 206.76883pt x 95.15381pt.
+ [9 <./images/DGM.png>] [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-Overfull \hbox (42.03275pt too wide) detected at line 156
+ [11
+
+]
+Overfull \hbox (42.03275pt too wide) detected at line 175
 \OML/lmm/m/it/10.95 C \OMS/lmsy/m/n/10.95 2 \OML/lmm/m/it/10.95 R[]X \OMS/lmsy/
 m/n/10.95 2 \OML/lmm/m/it/10.95 R[]C \OT1/lmr/m/n/10.95 = (\OML/lmm/m/it/10.95 
 X \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 ^^V\OT1/lmr/m/n/10.95 )[](\OML/lm
@@ -1088,73 +1094,73 @@ m/m/it/10.95 X \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 ^^V\OT1/lmr/m/n/10.9
 5 )\OML/lmm/m/it/10.95 argmin[][][] \OT1/lmr/m/n/10.95 = []
  []
 
-<images/pca.png, id=90, 963.6pt x 542.025pt>
+<images/pca.png, id=94, 963.6pt x 542.025pt>
 File: images/pca.png Graphic file (type png)
  <use images/pca.png>
-Package pdftex.def Info: images/pca.png used on input line 169.
+Package pdftex.def Info: images/pca.png used on input line 188.
 (pdftex.def)             Requested size: 404.70924pt x 227.64894pt.
 
-Overfull \hbox (8.70924pt too wide) in paragraph at lines 169--170
+Overfull \hbox (8.70924pt too wide) in paragraph at lines 188--189
 [][] 
  []
 
 [12] [13 <./images/pca.png (PNG copy)>] [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
-[15] <images/0removedPlistFeaturePlot.png, id=103, 597.23125pt x 586.19pt>
+[15] <images/0removedPlistFeaturePlot.png, id=107, 597.23125pt x 586.19pt>
 File: images/0removedPlistFeaturePlot.png Graphic file (type png)
 
 <use images/0removedPlistFeaturePlot.png>
 Package pdftex.def Info: images/0removedPlistFeaturePlot.png used on input line
- 208.
+ 227.
 (pdftex.def)             Requested size: 358.3415pt x 351.7167pt.
  [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17 <./images/0removedPlistFeaturePlot.png>] [18]
-<images/subspaceIllustrationBW0.png, id=115, 685.56125pt x 662.475pt>
+<images/subspaceIllustrationBW0.png, id=119, 685.56125pt x 662.475pt>
 File: images/subspaceIllustrationBW0.png Graphic file (type png)
 
 <use images/subspaceIllustrationBW0.png>
 Package pdftex.def Info: images/subspaceIllustrationBW0.png used on input line 
-239.
+258.
 (pdftex.def)             Requested size: 411.33992pt x 397.48807pt.
 
-Overfull \hbox (15.33992pt too wide) in paragraph at lines 239--240
+Overfull \hbox (15.33992pt too wide) in paragraph at lines 258--259
 [][] 
  []
 
 [19] [20 <./images/subspaceIllustrationBW0.png>] [21]
-<images/sum.png, id=126, 741.77126pt x 729.72626pt>
+<images/sum.png, id=130, 741.77126pt x 729.72626pt>
 File: images/sum.png Graphic file (type png)
  <use images/sum.png>
-Package pdftex.def Info: images/sum.png used on input line 260.
+Package pdftex.def Info: images/sum.png used on input line 279.
 (pdftex.def)             Requested size: 370.88472pt x 364.86224pt.
 
-<images/absSum.png, id=127, 741.77126pt x 729.72626pt>
+<images/absSum.png, id=131, 741.77126pt x 729.72626pt>
 File: images/absSum.png Graphic file (type png)
  <use images/absSum.png>
-Package pdftex.def Info: images/absSum.png used on input line 265.
+Package pdftex.def Info: images/absSum.png used on input line 284.
 (pdftex.def)             Requested size: 370.88472pt x 364.86224pt.
 
-<images/sumAbs.png, id=128, 741.77126pt x 729.72626pt>
+<images/sumAbs.png, id=132, 741.77126pt x 729.72626pt>
 File: images/sumAbs.png Graphic file (type png)
  <use images/sumAbs.png>
-Package pdftex.def Info: images/sumAbs.png used on input line 270.
+Package pdftex.def Info: images/sumAbs.png used on input line 289.
 (pdftex.def)             Requested size: 370.88472pt x 364.86224pt.
 
 [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23 <./images/sum.png>] <images/LSH.png, id=137, 521.95pt x 455.7025pt>
+ [23 <./images/sum.png>] <images/LSH.png, id=141, 521.95pt x 455.7025pt>
 File: images/LSH.png Graphic file (type png)
 
 <use images/LSH.png>
-Package pdftex.def Info: images/LSH.png used on input line 282.
+Package pdftex.def Info: images/LSH.png used on input line 301.
 (pdftex.def)             Requested size: 260.97435pt x 227.85068pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1163,12 +1169,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <./images/sumAbs.png>] [26 <./images/LSH.png (PNG copy)>]
-<images/sumAbsAgglHierClust-better.png, id=149, 741.77126pt x 729.72626pt>
+<images/sumAbsAgglHierClust-better.png, id=153, 741.77126pt x 729.72626pt>
 File: images/sumAbsAgglHierClust-better.png Graphic file (type png)
 
 <use images/sumAbsAgglHierClust-better.png>
 Package pdftex.def Info: images/sumAbsAgglHierClust-better.png used on input li
-ne 294.
+ne 313.
 (pdftex.def)             Requested size: 370.88472pt x 364.86224pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1180,83 +1186,83 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28 <./images/sumAbsAgglHierClust-better.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
-ter/model/p10_0outlierRmvd.png, id=157, 2454.16875pt x 2061.7025pt>
+ter/model/p10_0outlierRmvd.png, id=161, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
 o_jitter/model/p10_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
 _jitter/model/p10_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/no_jitter/model/p10_0outlierRmvd.png used on input line 306.
+s/boxplots/ggplot/no_jitter/model/p10_0outlierRmvd.png used on input line 325.
 (pdftex.def)             Requested size: 196.33751pt x 164.93956pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
-ter/random/p10_0outlierRmvd.png, id=158, 1868.9825pt x 2019.545pt>
+ter/random/p10_0outlierRmvd.png, id=162, 1868.9825pt x 2019.545pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
 o_jitter/random/p10_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
 _jitter/random/p10_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/no_jitter/random/p10_0outlierRmvd.png used on input line 307.
+s/boxplots/ggplot/no_jitter/random/p10_0outlierRmvd.png used on input line 326.
 
 (pdftex.def)             Requested size: 149.52165pt x 161.5669pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
-ter/model/p20_0outlierRmvd.png, id=159, 2454.16875pt x 2061.7025pt>
+ter/model/p20_0outlierRmvd.png, id=163, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
 o_jitter/model/p20_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
 _jitter/model/p20_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/no_jitter/model/p20_0outlierRmvd.png used on input line 314.
+s/boxplots/ggplot/no_jitter/model/p20_0outlierRmvd.png used on input line 333.
 (pdftex.def)             Requested size: 196.33751pt x 164.93956pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
-ter/random/p20_0outlierRmvd.png, id=160, 1868.9825pt x 2019.545pt>
+ter/random/p20_0outlierRmvd.png, id=164, 1868.9825pt x 2019.545pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
 o_jitter/random/p20_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
 _jitter/random/p20_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/no_jitter/random/p20_0outlierRmvd.png used on input line 315.
+s/boxplots/ggplot/no_jitter/random/p20_0outlierRmvd.png used on input line 334.
 
 (pdftex.def)             Requested size: 149.52165pt x 161.5669pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
-ter/model/p30_0outlierRmvd.png, id=161, 2454.16875pt x 2061.7025pt>
+ter/model/p30_0outlierRmvd.png, id=165, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
 o_jitter/model/p30_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
 _jitter/model/p30_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/no_jitter/model/p30_0outlierRmvd.png used on input line 320.
+s/boxplots/ggplot/no_jitter/model/p30_0outlierRmvd.png used on input line 339.
 (pdftex.def)             Requested size: 196.33751pt x 164.93956pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jit
-ter/random/p30_0outlierRmvd.png, id=162, 1868.9825pt x 2019.545pt>
+ter/random/p30_0outlierRmvd.png, id=166, 1868.9825pt x 2019.545pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
 o_jitter/random/p30_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no
 _jitter/random/p30_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/no_jitter/random/p30_0outlierRmvd.png used on input line 321.
+s/boxplots/ggplot/no_jitter/random/p30_0outlierRmvd.png used on input line 340.
 
 (pdftex.def)             Requested size: 149.52165pt x 161.5669pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p10_0o
-utlierRmvd.png, id=163, 2454.16875pt x 2061.7025pt>
+utlierRmvd.png, id=167, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
 10_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p1
 0_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/p10_0outlierRmvd.png used on input line 329.
+s/boxplots/ggplot/p10_0outlierRmvd.png used on input line 348.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
  [29 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
 o_jitter/model/p10_0outlierRmvd.png> </Users/eaalto/Desktop/Latex/Master_Thesis
@@ -1265,58 +1271,58 @@ aalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/no_jitter/model
 /p20_0outlierRmvd.png> </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images
 /boxplots/ggplot/no_jitter/random/p20_0outlierRmvd.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p20_0o
-utlierRmvd.png, id=172, 2454.16875pt x 2061.7025pt>
+utlierRmvd.png, id=176, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
 20_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p2
 0_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/p20_0outlierRmvd.png used on input line 335.
+s/boxplots/ggplot/p20_0outlierRmvd.png used on input line 354.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p30_0o
-utlierRmvd.png, id=173, 2454.16875pt x 2061.7025pt>
+utlierRmvd.png, id=177, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
 30_0outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p3
 0_0outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/p30_0outlierRmvd.png used on input line 342.
+s/boxplots/ggplot/p30_0outlierRmvd.png used on input line 361.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p10_1o
-utlierRmvd.png, id=174, 2454.16875pt x 2061.7025pt>
+utlierRmvd.png, id=178, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
 10_1outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p1
 0_1outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/p10_1outlierRmvd.png used on input line 349.
+s/boxplots/ggplot/p10_1outlierRmvd.png used on input line 368.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p20_1o
-utlierRmvd.png, id=175, 2454.16875pt x 2061.7025pt>
+utlierRmvd.png, id=179, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
 20_1outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p2
 0_1outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/p20_1outlierRmvd.png used on input line 355.
+s/boxplots/ggplot/p20_1outlierRmvd.png used on input line 374.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p30_1o
-utlierRmvd.png, id=176, 2454.16875pt x 2061.7025pt>
+utlierRmvd.png, id=180, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p
 30_1outlierRmvd.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p3
 0_1outlierRmvd.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/boxplots/ggplot/p30_1outlierRmvd.png used on input line 360.
+s/boxplots/ggplot/p30_1outlierRmvd.png used on input line 379.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
  [30 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/n
 o_jitter/model/p30_0outlierRmvd.png> </Users/eaalto/Desktop/Latex/Master_Thesis
@@ -1330,190 +1336,190 @@ aster_Thesis_Report/images/boxplots/ggplot/p10_1outlierRmvd.png> </Users/eaalto
 >] [33 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot
 /p30_1outlierRmvd.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-1.png, id=197, 481.8pt x 481.8pt>
+1.png, id=201, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot1.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot1.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot1.png used on input line 372.
+s/confRanks/confRankPlot1.png used on input line 391.
 (pdftex.def)             Requested size: 192.71658pt x 192.71658pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
-um1.png, id=198, 2454.16875pt x 2061.7025pt>
+um1.png, id=202, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kCumSum1.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 CumSum1.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankCumSum1.png used on input line 373.
+s/confRanks/confRankCumSum1.png used on input line 392.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-Overfull \hbox (73.20348pt too wide) in paragraph at lines 371--374
+Overfull \hbox (73.20348pt too wide) in paragraph at lines 390--393
 []\T1/lmr/m/n/10.95 1 tree [] [] 
  []
 
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-3.png, id=199, 481.8pt x 481.8pt>
+3.png, id=203, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot3.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot3.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot3.png used on input line 379.
+s/confRanks/confRankPlot3.png used on input line 398.
 (pdftex.def)             Requested size: 192.71658pt x 192.71658pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
-um3.png, id=200, 2454.16875pt x 2061.7025pt>
+um3.png, id=204, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kCumSum3.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 CumSum3.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankCumSum3.png used on input line 380.
+s/confRanks/confRankCumSum3.png used on input line 399.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-Overfull \hbox (77.52269pt too wide) in paragraph at lines 378--381
+Overfull \hbox (77.52269pt too wide) in paragraph at lines 397--400
 []\T1/lmr/m/n/10.95 3 trees [] [] 
  []
 
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-5.png, id=201, 481.8pt x 481.8pt>
+5.png, id=205, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot5.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot5.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot5.png used on input line 386.
+s/confRanks/confRankPlot5.png used on input line 405.
 (pdftex.def)             Requested size: 192.71658pt x 192.71658pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
-um5.png, id=202, 2454.16875pt x 2061.7025pt>
+um5.png, id=206, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kCumSum5.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 CumSum5.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankCumSum5.png used on input line 387.
+s/confRanks/confRankCumSum5.png used on input line 406.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-Overfull \hbox (77.52269pt too wide) in paragraph at lines 385--388
+Overfull \hbox (77.52269pt too wide) in paragraph at lines 404--407
 []\T1/lmr/m/n/10.95 5 trees [] [] 
  []
 
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-10.png, id=203, 481.8pt x 481.8pt>
+10.png, id=207, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot10.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot10.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot10.png used on input line 393.
+s/confRanks/confRankPlot10.png used on input line 412.
 (pdftex.def)             Requested size: 192.71658pt x 192.71658pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
-um10.png, id=204, 2454.16875pt x 2061.7025pt>
+um10.png, id=208, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kCumSum10.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 CumSum10.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankCumSum10.png used on input line 394.
+s/confRanks/confRankCumSum10.png used on input line 413.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-Overfull \hbox (82.99768pt too wide) in paragraph at lines 392--395
+Overfull \hbox (82.99768pt too wide) in paragraph at lines 411--414
 []\T1/lmr/m/n/10.95 10 trees [] [] 
  []
 
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-20.png, id=205, 481.8pt x 481.8pt>
+20.png, id=209, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot20.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot20.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot20.png used on input line 400.
+s/confRanks/confRankPlot20.png used on input line 419.
 (pdftex.def)             Requested size: 192.71658pt x 192.71658pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
-um20.png, id=206, 2454.16875pt x 2061.7025pt>
+um20.png, id=210, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kCumSum20.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 CumSum20.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankCumSum20.png used on input line 401.
+s/confRanks/confRankCumSum20.png used on input line 420.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-Overfull \hbox (82.99768pt too wide) in paragraph at lines 399--402
+Overfull \hbox (82.99768pt too wide) in paragraph at lines 418--421
 []\T1/lmr/m/n/10.95 20 trees [] [] 
  []
 
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-30.png, id=207, 481.8pt x 481.8pt>
+30.png, id=211, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot30.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot30.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot30.png used on input line 407.
+s/confRanks/confRankPlot30.png used on input line 426.
 (pdftex.def)             Requested size: 192.71658pt x 192.71658pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
-um30.png, id=208, 2454.16875pt x 2061.7025pt>
+um30.png, id=212, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kCumSum30.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 CumSum30.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankCumSum30.png used on input line 408.
+s/confRanks/confRankCumSum30.png used on input line 427.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-Overfull \hbox (82.99768pt too wide) in paragraph at lines 406--409
+Overfull \hbox (82.99768pt too wide) in paragraph at lines 425--428
 []\T1/lmr/m/n/10.95 30 trees [] [] 
  []
 
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot
-50.png, id=209, 481.8pt x 481.8pt>
+50.png, id=213, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kPlot50.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 Plot50.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankPlot50.png used on input line 414.
+s/confRanks/confRankPlot50.png used on input line 433.
 (pdftex.def)             Requested size: 192.71658pt x 192.71658pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumS
-um50.png, id=210, 2454.16875pt x 2061.7025pt>
+um50.png, id=214, 2454.16875pt x 2061.7025pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRan
 kCumSum50.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRank
 CumSum50.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/confRanks/confRankCumSum50.png used on input line 415.
+s/confRanks/confRankCumSum50.png used on input line 434.
 (pdftex.def)             Requested size: 245.43124pt x 206.18233pt.
 
-Overfull \hbox (82.99768pt too wide) in paragraph at lines 413--416
+Overfull \hbox (82.99768pt too wide) in paragraph at lines 432--435
 []\T1/lmr/m/n/10.95 50 trees [] [] 
  []
 
@@ -1534,82 +1540,82 @@ rt/images/confRanks/confRankCumSum30.png> </Users/eaalto/Desktop/Latex/Master_T
 hesis_Report/images/confRanks/confRankPlot50.png> </Users/eaalto/Desktop/Latex/
 Master_Thesis_Report/images/confRanks/confRankCumSum50.png>]
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/hiphop_1_5.p
-ng, id=238, 481.8pt x 481.8pt>
+ng, id=242, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/hiphop_
 1_5.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/hiphop_1
 _5.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/hiphop_1_5.png used on input line 425.
+s/qvalEvals/hiphop_1_5.png used on input line 444.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/hiphop_1_10.
-png, id=239, 481.8pt x 481.8pt>
+png, id=243, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/hiphop_
 1_10.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/hiphop_1
 _10.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/hiphop_1_10.png used on input line 426.
+s/qvalEvals/hiphop_1_10.png used on input line 445.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
-Overfull \hbox (88.23213pt too wide) in paragraph at lines 425--427
+Overfull \hbox (88.23213pt too wide) in paragraph at lines 444--446
 [][] [] 
  []
 
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/rock_1_5.png
-, id=240, 481.8pt x 481.8pt>
+, id=244, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/rock_1_
 5.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/rock_1_5
 .png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/rock_1_5.png used on input line 431.
+s/qvalEvals/rock_1_5.png used on input line 450.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/rock_1_10.pn
-g, id=241, 481.8pt x 481.8pt>
+g, id=245, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/rock_1_
 10.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/rock_1_1
 0.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/rock_1_10.png used on input line 432.
+s/qvalEvals/rock_1_10.png used on input line 451.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
-Overfull \hbox (88.23213pt too wide) in paragraph at lines 431--433
+Overfull \hbox (88.23213pt too wide) in paragraph at lines 450--452
 [][] [] 
  []
 
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/metal_1_5.pn
-g, id=242, 481.8pt x 481.8pt>
+g, id=246, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/metal_1
 _5.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/metal_1_
 5.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/metal_1_5.png used on input line 437.
+s/qvalEvals/metal_1_5.png used on input line 456.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
 </Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/metal_1_10.p
-ng, id=243, 481.8pt x 481.8pt>
+ng, id=247, 481.8pt x 481.8pt>
 File: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/metal_1
 _10.png Graphic file (type png)
 
 <use /Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/qvalEvals/metal_1_
 10.png>
 Package pdftex.def Info: /Users/eaalto/Desktop/Latex/Master_Thesis_Report/image
-s/qvalEvals/metal_1_10.png used on input line 438.
+s/qvalEvals/metal_1_10.png used on input line 457.
 (pdftex.def)             Requested size: 240.8994pt x 240.8994pt.
 
-Overfull \hbox (88.23213pt too wide) in paragraph at lines 437--439
+Overfull \hbox (88.23213pt too wide) in paragraph at lines 456--458
 [][] [] 
  []
 
@@ -1629,7 +1635,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [42] (./Master_Thesis_Erik_AaltoV2.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 463--1
+Underfull \hbox (badness 10000) in paragraph at lines 482--1
 
  []
 
@@ -1638,10 +1644,10 @@ bibitemlist
 [45
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 93.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 98.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [46] [47]
+) [46]) [47]
 [48
 
 ] [49]
@@ -1650,13 +1656,13 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
  (./Master_Thesis_Erik_AaltoV2.aux) ) 
 Here is how much of TeX's memory you used:
- 17852 strings out of 493117
- 337054 string characters out of 6135434
- 408390 words of memory out of 5000000
- 20929 multiletter control sequences out of 15000+600000
+ 17863 strings out of 493117
+ 337243 string characters out of 6135434
+ 408504 words of memory out of 5000000
+ 20938 multiletter control sequences out of 15000+600000
  84023 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,13n,56p,2721b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,56p,2721b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/
 enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/l
 m-mathex.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.e
@@ -1677,10 +1683,10 @@ ss12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 ocal/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texli
 ve/2014/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Master_Thesis_Erik_AaltoV2.pdf (57 pages, 4129957 bytes).
+Output written on Master_Thesis_Erik_AaltoV2.pdf (57 pages, 4153671 bytes).
 PDF statistics:
- 353 PDF objects out of 1000 (max. 8388607)
+ 357 PDF objects out of 1000 (max. 8388607)
  194 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
