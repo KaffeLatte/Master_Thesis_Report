@@ -34,7 +34,7 @@
 \clearpage
 \renewcommand{\abstractname}{Acknowledgements}
 \begin{abstract}
- Writing this thesis I realize that I am a lucky guy. I have had the opportunity to work on a very interesting project, with engaged supervisors who have been there for me from start to end. Therefore I would like to start off with thanking my supervisors Carl Henrik Ek and Boxun Zhang. Thank you for having created the opportunity for me to write this thesis, for believing in me and for making this thesis a fun and learning experience. I have had a great time working with you and I am hoping that you feel the same way. I further owe a great deal of gratitude to my fellow Spotify thesis workers Anders Pettersson and Matteo Poletti, thank you for all the good times and the interesting discussions. I want to thank Ahmad Qamar from Spotify New York, thank you so much for walking me through all the cool things that are happening with Machine Learning in NYC. I also want to thank the rest of Spotify for making this thesis a reality and a special thanks goes to the Analytics team, thank you for all the support.  Last, but definitely not least, I would like to thank my partner, Maria Leites, for being supportive, understanding and always standing by my side, you are simply the best.
+ Writing this thesis I realize that I am a lucky guy. I have had the opportunity to work on a very interesting project, with engaged supervisors who have been there for me from start to end. Therefore I would like to start off with thanking my supervisors Carl Henrik Ek and Boxun Zhang. Thank you for having created the opportunity for me to write this thesis, for believing in me and for making this thesis a fun and learning experience. I have had a great time working with you. I further owe a great deal of gratitude to my fellow Spotify thesis workers Anders Pettersson and Matteo Poletti, thank you for all the good times and the interesting discussions. I want to thank Ahmad Qamar from Spotify New York, thank you so much for walking me through all the cool things that are happening with Machine Learning in NYC. I also want to thank the rest of Spotify for making this thesis a reality and a special thanks goes to the Analytics team, thank you for all the support.  Last, but definitely not least, I would like to thank my partner, Maria Leites, for being supportive, understanding and always standing by my side, you are simply the best.
 \end{abstract}
   
 
@@ -170,17 +170,16 @@ Here \textit{X} is our data and \textit{C} is the covariance matrix of the data 
 
 As can be seen in the figure above, the first principal component lays in the direction that describes the largest part of variance in data. The principal components are orthogonal to each other. 
 
-\section{Generalized vs Discriminative Models}
-
 \chapter{Methodology}
+\begin{displayquote}
+\textit{Without assumptions you cannot do machine learning} \\\\Ryan Adams
+\end{displayquote}
 
 \section{Problem Outline}
 The problem this thesis is trying to solve is to select a number of songs given a predefined playlist so that the selected songs constitute a playlist similar to the predefined one. 
 
 \section{Assumptions}
-\begin{displayquote}
-\textit{Without assumptions you cannot do machine learning} \\\\Ryan Adams
-\end{displayquote}
+
 
 The goal of the thesis is to generate playlists, similar to seed playlists choosen by the user. In order to do this there is a need for assumptions regarding playlists.
 
@@ -324,28 +323,39 @@ As can be seen the model outperforms the baseline in many cases by an increase i
 When increasing the number of trees in the approximate nearest neighbour pre-filtering step while using the model the lower limit of variance goes down. This implies that using approximate nearest neighbours as pre-filtering discriminates tracks that are true positives. To scrutinize this lets look more closely at the data and see how the data points are distributed along the axis of variance.
 
 \begin{figure}
-Model@10
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p10_0outlierRmvd.png}
 
-Model@20
-\includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p20_0outlierRmvd.png}
+\caption{Image showing the averages including data points for precision at 10}
+\end{figure}
 
+\begin{figure}
+\includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p20_0outlierRmvd.png}
+\caption{Image showing the averages including data points for precision at 20}
+\end{figure}
+
+
+\begin{figure}
 Model@30
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p30_0outlierRmvd.png}
-
+\caption{Image showing the averages including data points for precision at 30}
 \end{figure}
 
 What can be seen is that there is only one point that causes the lower tail in variance for each boxplot, this point is a result of the same playlist for each boxplot and is also the overall lowest performing playlist. This point can therefore be threated as an outlier as it is not well described by the model. Removing this outlier yields the following result.
 
 \begin{figure}
-Model@10 1 outlier removed
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p10_1outlierRmvd.png}
+\caption{Image showing the averages including data points for precision at 10 with one outlier removed}
+\end{figure}
 
+\begin{figure}
 Model@20 1 outlier removed
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p20_1outlierRmvd.png}
+\caption{Image showing the averages including data points for precision at 20 with one outlier removed}
+\end{figure}
 
-Model@30 1 outlier removed
+\begin{figure}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/boxplots/ggplot/p30_1outlierRmvd.png}
+\caption{Image showing the averages including data points for precision at 30 with one outlier removed}
 \end{figure}
 
 
@@ -358,42 +368,49 @@ As can be seen in the image showing the playlist clusters there is often a high 
 1 tree
 \includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot1.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum1.png}
+\caption{Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 1 tree in the pre-filtering step.}
 \end{figure}
 
 \begin{figure}
 3 trees
 \includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot3.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum3.png}
+\caption{Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 3 trees in the pre-filtering step.}
 \end{figure}
 
 \begin{figure}
 5 trees
 \includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot5.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum5.png}
+\caption{Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 5 trees in the pre-filtering step.}
 \end{figure}
 
 \begin{figure}
 10 trees
 \includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot10.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum10.png}
+\caption{Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 10 trees in the pre-filtering step.}
 \end{figure}
 
 \begin{figure}
 20 trees
 \includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot20.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum20.png}
+\caption{Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 20 trees in the pre-filtering step.}
 \end{figure}
 
 \begin{figure}
 30 trees
 \includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot30.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum30.png}
+\caption{Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 30 trees in the pre-filtering step.}
 \end{figure}
 
 \begin{figure}
 50 trees
 \includegraphics[scale=0.4]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankPlot50.png}
 \includegraphics[scale=0.1]{/Users/eaalto/Desktop/Latex/Master_Thesis_Report/images/confRanks/confRankCumSum50.png}
+\caption{Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 50 trees in the pre-filtering step.}
 \end{figure}
 
 There is a similar behaviour for all number of trees in the approximate nearest neighbour forest where roughly fifty percent of all false positives come from the seven playlists most similar to the seed playlist. This result show that to a high extent tracks regarded as false positives come from playlists that are ranked as being similar to the seed playlist. It is therefore reasonable to believe that precision calculated as tracks coming from playlists in the same cluster is a conservative measure and that the actual results are better than what the precision measure reveals.
@@ -422,23 +439,23 @@ To find out if the results from evaluating the rank of playlists from which the 
 
 As can be seen form the user evaluations surprisingly the tracks from the model were ranked higher than those taken from the curated playlists for both Hip Hop and Rock. The model selected tracks for metal were ranked lower, but the users rankings confirmed the notion that precision as used for the quantitative evaluations was a conservative measure as users found less outliers than there were false positives from the quantitative evaluation.
 
-\chapter{Computational Complexity Analysis}
-One reason to why time complexity is important in the field of Machine Learning is that it gives a unified measure of the time and resources needed to solve a problem. One example is if the run-time for an algorithm is asked a not uncommon answer is that it takes x time. An answer as such gives no information of how the algorithm scales, whether it is implemented in an efficient manner or not or if the run-time is hardware dependent. For example, an algorithm that take one day to solve a problem, but has linear time complexity can solve the same problem for the double amount of data in two days. For an algorithm with quadratic running time it would take four days to solve the same problem should input data be doubled. Another example is if an algorithm is run on a brand new computer or a computer that is 15 years old, simply stating the run-time does not give a unified measure as run time will change depending on hardware. Lastly, given the size of input data and the time complexity of the algorithm a hint of the expected run-time can be obtained and used for debugging purposes.
- As can be easily understood analyzing time complexity within the machine learning field is essential to understand the scalability of a machine learning algorithm. An algorithm that grows faster than linear with data quickly becomes unfeasible as the amount of data used grows large. In the case of Spotify the number of tracks in the song library and the number of users are in the magnitude of millions or tens of millions which means that even a linear run-time might be too slow to be practically usable.
- 
-\section{Time Complexity of Model}
-Computational complexity theory is about analyzing the amount of resources needed to solve a particular problem and classifying problems according to how difficult they are to solve. Resources needed to solve a problem generally mean running time or memory, but could also include randomness or communication. 
-
-Analyzing the time it takes for an algorithm to solve a problem is also called time complexity. Time complexity is a quantification of the time needed to solve a problem as a function of the length or size of the input. A common way to describe time complexity is the asymptotic behaviour of running time needed as a function of input, also called \textit{Big-O} notation. Time complexity analysis with \textit{Big-O} notation takes the dominant terms into regard as input data grows towards infinity. For example if we have a problem that for the length of input \textit{n} requires $(2n)^2$ operations the problem has a time complexity of $O(n^2)$. \textit{Big-O} notation assumes that some operations called trivial operations take a constant time to perform, \textit{O(1)}, and if \textit{n} such operations are performed the time complexity becomes \textit{O(n)}. All operations that do not grow with the size of input data are dropped using \textit{Big-O} notation. For example if an algorithm needs a cubic number of operations for each input data term and an additional thousand operations that do not change with the size of input data the total amount of operations needed is $n^3 + 1000$ which becomes $O(n^3)$
-
-The first step in the model is to create a covariance matrix from the features of tracks in the seed playlist. The computational complexity of creating a covariance matrix is $O(ND^2)$ where \textit{N} is the number of tracks in the playlist and \textit{D} is the number of features that represent each track\cite{kwatra2010fast}. Once the covariance matrix is created an eigen value decomposition is needed to get an orthogonal representation of features in the data, the time complexity for the eigen value decomposition is in the magnitude of $O(D^3)$ where \textit{D} is the number of rows, or columns due to symmetry, in the covariance matrix which is equal to the number of dimensions of features for each playlist track\cite{pan1999complexity}. After the eigendecomposition a projection matrix is needed to project tracks into the principal component space of a seed playlist. To create the projection matrix one matrix inversion with complexity of $O(D^3)$ and three matrix multiplications, also with time complexity of $O(D^3)$ are needed, with a resulting time complexity of creating the projection matrix of $O(D^3)$. To project each track into the principal component space a matrix vector multiplication is needed with time complexity of $O(D^2)$ and this is done for each track which yields a resulting time complexity of $O(ND^2)$ where \textit{N} are the number of tracks to be projected. The calculation of relative change in magnitude requires calculating the length of each track represented as a vector which includes a squared root operation and thus has the time complexity of $O(D^2)$. Creating a covariance matrix, eigendecompose it and creating a projection matrix does only have to be done once and as the number of tracks in a playlist does not exceed the magnitude of hundreds and the number of dimensions for each track is fixed the steps of the model before projecting tracks can be regarded as constant operations. Using approximate nearest neighbours for one track is a constant time operation and needs to be done for each track in the seed playlist which gives a resulting time complexity of \textit{O(N)} where \textit{N} is the number of tracks in the seed playlist. The resulting complexity of the model thus becomes $O(nD^2)$ where \textit{n} are the number of tracks obtained by using approximate nearest neighbours and \textit{n << N} where \textit{N} is the total number of tracks in the music library. This yields a resulting time complexity which is sublinear in the number of tracks and quadratic in the number of features. What is further interesting is that the projection of tracks into subspaces can be done in parallel.
-
 \chapter{Discussion and Future Work}
 
 \section{Discussion}
 Using playlists is an attractive means of consuming music. This can be shown by the fact that in the Spotify music library the number of songs is in magnitude of millions but the number of playlists is in magnitude of billions. It is therefore desirable for a music provider to be able to automatically generate playlists adapted to a users distinct taste. One way of doing this is to generate playlists from an initial seed playlist which the user can specify.
  The method used in this thesis provides a scalable and parallelizable approach for a step on the way of creating automatically generated playlists of high quality, merely the selection of candidate songs for a generated playlist. The method has proven to perform better than a baseline in form of random sampling from approximate nearest neighbours for candidate song selection. The baseline might seem trivial at a glance, but these results imply that learning a playlist representation present a superior approach for playlist song selection than neighbourhood-based approaches. Results therefore confirm that the initial assumption of regarding a playlist as a good mix of songs and therefore regarding variance as a important factor to distinguish playlist characteristics is a valid approach.
  Quantitative results also imply that the actual quality of songs selected for playlist generation is better than the one measured by calculating precision. Qualitative assesments further strengthens this hypothesis. The qualitative assesments made ranked the generated playlists higher than the ones from where the representation was learned in two out of three cases. The third cased consisted of a playlist with the second lowest precision in the entire experiment and the evaluations made qualitatively suggest a more than a hundred percent higher actual precision of that playlist than what the precision measure entails. These results together suggest that learning a playlist representation in an eigenbased way is an effective approach for playlist generation together with approximate nearest neighbour pre-filtering. Lastly, as rankings of false positives for the precision measure to a high extent came from similar playlists it is also reasonable to assume that the performance of the model would be even better should a bigger data set with more relevant tracks for each seed playlist be present. 
+
+\subsection{Complexity Analysis}
+One reason to why time complexity is important in the field of Machine Learning is that it gives a unified measure of the time and resources needed to solve a problem. One example is if the run-time for an algorithm is asked a not uncommon answer is that it takes x time. An answer as such gives no information of how the algorithm scales, whether it is implemented in an efficient manner or not or if the run-time is hardware dependent. For example, an algorithm that take one day to solve a problem, but has linear time complexity can solve the same problem for the double amount of data in two days. For an algorithm with quadratic running time it would take four days to solve the same problem should input data be doubled. Another example is if an algorithm is run on a brand new computer or a computer that is 15 years old, simply stating the run-time does not give a unified measure as run time will change depending on hardware. Lastly, given the size of input data and the time complexity of the algorithm a hint of the expected run-time can be obtained and used for debugging purposes.
+ As can be easily understood analyzing time complexity within the machine learning field is essential to understand the scalability of a machine learning algorithm. An algorithm that grows faster than linear with data quickly becomes unfeasible as the amount of data used grows large. In the case of Spotify the number of tracks in the song library and the number of users are in the magnitude of millions or tens of millions which means that even a linear run-time might be too slow to be practically usable.
+ 
+Computational complexity theory is about analyzing the amount of resources needed to solve a particular problem and classifying problems according to how difficult they are to solve. Resources needed to solve a problem generally mean running time or memory, but could also include randomness or communication. 
+
+Analyzing the time it takes for an algorithm to solve a problem is also called time complexity. Time complexity is a quantification of the time needed to solve a problem as a function of the length or size of the input. A common way to describe time complexity is the asymptotic behaviour of running time needed as a function of input, also called \textit{Big-O} notation. Time complexity analysis with \textit{Big-O} notation takes the dominant terms into regard as input data grows towards infinity. For example if we have a problem that for the length of input \textit{n} requires $(2n)^2$ operations the problem has a time complexity of $O(n^2)$. \textit{Big-O} notation assumes that some operations called trivial operations take a constant time to perform, \textit{O(1)}, and if \textit{n} such operations are performed the time complexity becomes \textit{O(n)}. All operations that do not grow with the size of input data are dropped using \textit{Big-O} notation. For example if an algorithm needs a cubic number of operations for each input data term and an additional thousand operations that do not change with the size of input data the total amount of operations needed is $n^3 + 1000$ which becomes $O(n^3)$
+
+The first step in the model is to create a covariance matrix from the features of tracks in the seed playlist. The computational complexity of creating a covariance matrix is $O(ND^2)$ where \textit{N} is the number of tracks in the playlist and \textit{D} is the number of features that represent each track\cite{kwatra2010fast}. Once the covariance matrix is created an eigen value decomposition is needed to get an orthogonal representation of features in the data, the time complexity for the eigen value decomposition is in the magnitude of $O(D^3)$ where \textit{D} is the number of rows, or columns due to symmetry, in the covariance matrix which is equal to the number of dimensions of features for each playlist track\cite{pan1999complexity}. After the eigendecomposition a projection matrix is needed to project tracks into the principal component space of a seed playlist. To create the projection matrix one matrix inversion with complexity of $O(D^3)$ and three matrix multiplications, also with time complexity of $O(D^3)$ are needed, with a resulting time complexity of creating the projection matrix of $O(D^3)$. To project each track into the principal component space a matrix vector multiplication is needed with time complexity of $O(D^2)$ and this is done for each track which yields a resulting time complexity of $O(ND^2)$ where \textit{N} are the number of tracks to be projected. The calculation of relative change in magnitude requires calculating the length of each track represented as a vector which includes a squared root operation and thus has the time complexity of $O(D^2)$. Creating a covariance matrix, eigendecompose it and creating a projection matrix does only have to be done once and as the number of tracks in a playlist does not exceed the magnitude of hundreds and the number of dimensions for each track is fixed the steps of the model before projecting tracks can be regarded as constant operations. Using approximate nearest neighbours for one track is a constant time operation and needs to be done for each track in the seed playlist which gives a resulting time complexity of \textit{O(N)} where \textit{N} is the number of tracks in the seed playlist. The resulting complexity of the model thus becomes $O(nD^2)$ where \textit{n} are the number of tracks obtained by using approximate nearest neighbours and \textit{n << N} where \textit{N} is the total number of tracks in the music library. This yields a resulting time complexity which is sublinear in the number of tracks and quadratic in the number of features. What is further interesting is that the projection of tracks into subspaces can be done in parallel. 
+ 
 \section{Future Work}
 \textit{So many things to do and so little time} \\The Joker\\\\
 A given first step of continuing the work presented in this thesis would be to also take the ordering of songs, once selected as good candidate for playlist generation, into consideration. It would also be interesting to study how the amount of variance captured when creating a principal component space for a playlist would relate to the quality of the songs selected. Feature selection has been outside the scope of this thesis, but it is very likely that the creation of better features would make the model perform better. One particularly interesting feature that has been lacking for this thesis is time, which is an important factor in the music context. The use of a larger data set for better evaluation is also of interest as this would give a better generalizability than what could be fitted into the scope of this thesis. Lastly, and what seems like the most fun, would be to consider other covariance functions than the linear one and to use a model, such as probabilistic principal component analysis, which apart from covariance also can take location, such as in the form of the mean, into consideration intrinsically.
