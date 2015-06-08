@@ -75,6 +75,12 @@ Beth Logan et~al.
 \newblock Mel frequency cepstral coefficients for music modeling.
 \newblock In {\em ISMIR}, 2000.
 
+\bibitem{mackay1998introduction}
+David~JC MacKay.
+\newblock Introduction to gaussian processes.
+\newblock {\em NATO ASI Series F Computer and Systems Sciences}, 168:133--166,
+  1998.
+
 \bibitem{melville2002content}
 Prem Melville, Raymond~J Mooney, and Ramadass Nagarajan.
 \newblock Content-boosted collaborative filtering for improved recommendations.
@@ -116,6 +122,17 @@ Robert Ragno, Christopher~JC Burges, and Cormac Herley.
   playlist generation.
 \newblock In {\em Proceedings of the 7th ACM SIGMM international workshop on
   Multimedia information retrieval}, pages 73--80. ACM, 2005.
+
+\bibitem{rasmussen2004gaussian}
+Carl~Edward Rasmussen.
+\newblock Gaussian processes in machine learning.
+\newblock In {\em Advanced lectures on machine learning}, pages 63--71.
+  Springer, 2004.
+
+\bibitem{rasmussen2006gaussian}
+Carl~Edward Rasmussen.
+\newblock Gaussian processes for machine learning.
+\newblock 2006.
 
 \bibitem{sarwar2001item}
 Badrul Sarwar, George Karypis, Joseph Konstan, and John Riedl.

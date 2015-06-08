@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Master_Thesis_Erik_AaltoV2.aux
 The style file: plain.bst
 Database file #1: refList.bib
-You've used 24 entries,
+Warning--empty journal in rasmussen2006gaussian
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            643 strings with 8243 characters,
-and the built_in function-call counts, 9460 in all, are:
-= -- 986
-> -- 364
-< -- 12
-+ -- 148
-- -- 118
-* -- 590
-:= -- 1440
-add.period$ -- 82
-call.type$ -- 24
-change.case$ -- 129
+            659 strings with 8584 characters,
+and the built_in function-call counts, 10347 in all, are:
+= -- 1081
+> -- 385
+< -- 13
++ -- 157
+- -- 124
+* -- 636
+:= -- 1583
+add.period$ -- 92
+call.type$ -- 27
+change.case$ -- 141
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 405
-empty$ -- 792
-format.name$ -- 118
-if$ -- 2105
+cite$ -- 28
+duplicate$ -- 448
+empty$ -- 873
+format.name$ -- 124
+if$ -- 2299
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 23
-newline$ -- 123
-num.names$ -- 48
-pop$ -- 166
+int.to.str$ -- 27
+missing$ -- 26
+newline$ -- 138
+num.names$ -- 54
+pop$ -- 181
 preamble$ -- 1
-purify$ -- 106
+purify$ -- 115
 quote$ -- 0
-skip$ -- 314
+skip$ -- 343
 stack$ -- 0
-substring$ -- 677
-swap$ -- 140
-text.length$ -- 12
+substring$ -- 741
+swap$ -- 149
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 94
-warning$ -- 0
-while$ -- 99
-width$ -- 26
-write$ -- 270
+type$ -- 106
+warning$ -- 1
+while$ -- 110
+width$ -- 29
+write$ -- 302
+(There was 1 warning)
