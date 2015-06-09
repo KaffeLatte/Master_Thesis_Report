@@ -1,0 +1,42 @@
+\changetocdepth {2}
+\select@language {english}
+\select@language {english}
+\select@language {swedish}
+\select@language {english}
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Project Introduction}{1}
+\contentsline {section}{\numberline {1.2}Project Aim}{2}
+\contentsline {chapter}{\chapternumberline {2}Background}{3}
+\contentsline {section}{\numberline {2.1}Collaborative Filtering}{3}
+\contentsline {section}{\numberline {2.2}Content Based Approaches}{6}
+\contentsline {section}{\numberline {2.3}Hybrid Systems}{7}
+\contentsline {section}{\numberline {2.4}Playlist Generation}{8}
+\contentsline {subsection}{\numberline {2.4.1}Probabilistic Graphical Models for Playlist Generation}{8}
+\contentsline {subsection}{\numberline {2.4.2}Gaussian Processes for Playlist Generation}{10}
+\contentsline {chapter}{\chapternumberline {3}Representation Learning}{13}
+\contentsline {section}{\numberline {3.1}Representation Learning}{13}
+\contentsline {section}{\numberline {3.2}Principal Component Analysis}{14}
+\contentsline {chapter}{\chapternumberline {4}Methodology}{17}
+\contentsline {section}{\numberline {4.1}Problem Outline}{17}
+\contentsline {section}{\numberline {4.2}Assumptions}{17}
+\contentsline {section}{\numberline {4.3}Data}{17}
+\contentsline {section}{\numberline {4.4}Pre-processing}{18}
+\contentsline {section}{\numberline {4.5}Exploratory Data Analysis}{18}
+\contentsline {section}{\numberline {4.6}Learning Playlist Characteristics}{18}
+\contentsline {section}{\numberline {4.7}Handling zero variance terms}{20}
+\contentsline {section}{\numberline {4.8}Selecting candidate songs for a playlist context}{20}
+\contentsline {subsection}{\numberline {4.8.1}Subspace method}{21}
+\contentsline {section}{\numberline {4.9}Playlist Comparison}{23}
+\contentsline {section}{\numberline {4.10}Approximate Nearest Neighbours}{24}
+\contentsline {chapter}{\chapternumberline {5}Results}{29}
+\contentsline {section}{\numberline {5.1}Precision}{29}
+\contentsline {section}{\numberline {5.2}Comparing Model to Baseline}{31}
+\contentsline {section}{\numberline {5.3}Confusions}{35}
+\contentsline {section}{\numberline {5.4}Qualitative Evaluations}{36}
+\contentsline {chapter}{\chapternumberline {6}Discussion and Future Work}{43}
+\contentsline {section}{\numberline {6.1}Discussion}{43}
+\contentsline {subsection}{\numberline {6.1.1}Complexity Analysis}{44}
+\contentsline {section}{\numberline {6.2}Future Work}{45}
+\contentsline {chapter}{Bibliography}{47}
+\contentsline {chapter}{Appendices}{49}
+\contentsline {appendix}{\chapternumberline {A}RDF}{51}

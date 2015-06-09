@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: erik_aalto.aux
+The style file: plain.bst
+Database file #1: refList.bib
+Warning--empty journal in rasmussen2006gaussian
+You've used 27 entries,
+            2118 wiz_defined-function locations,
+            659 strings with 8552 characters,
+and the built_in function-call counts, 10347 in all, are:
+= -- 1081
+> -- 385
+< -- 13
++ -- 157
+- -- 124
+* -- 636
+:= -- 1583
+add.period$ -- 92
+call.type$ -- 27
+change.case$ -- 141
+chr.to.int$ -- 0
+cite$ -- 28
+duplicate$ -- 448
+empty$ -- 873
+format.name$ -- 124
+if$ -- 2299
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 26
+newline$ -- 138
+num.names$ -- 54
+pop$ -- 181
+preamble$ -- 1
+purify$ -- 115
+quote$ -- 0
+skip$ -- 343
+stack$ -- 0
+substring$ -- 741
+swap$ -- 149
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 106
+warning$ -- 1
+while$ -- 110
+width$ -- 29
+write$ -- 302
+(There was 1 warning)

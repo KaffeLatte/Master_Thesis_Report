@@ -1,0 +1,160 @@
+\begin{thebibliography}{10}
+
+\bibitem{adomavicius2005toward}
+Gediminas Adomavicius and Alexander Tuzhilin.
+\newblock Toward the next generation of recommender systems: A survey of the
+  state-of-the-art and possible extensions.
+\newblock {\em Knowledge and Data Engineering, IEEE Transactions on},
+  17(6):734--749, 2005.
+
+\bibitem{bengio2013representation}
+Yoshua Bengio, Aaron Courville, and Pascal Vincent.
+\newblock Representation learning: A review and new perspectives.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 35(8):1798--1828, 2013.
+
+\bibitem{beyer1999nearest}
+Kevin Beyer, Jonathan Goldstein, Raghu Ramakrishnan, and Uri Shaft.
+\newblock When is "nearest neighbor" meaningful?
+\newblock In {\em Database Theory?ICDT'99}, pages 217--235. Springer, 1999.
+
+\bibitem{breese1998empirical}
+John~S Breese, David Heckerman, and Carl Kadie.
+\newblock Empirical analysis of predictive algorithms for collaborative
+  filtering.
+\newblock In {\em Proceedings of the Fourteenth conference on Uncertainty in
+  artificial intelligence}, pages 43--52. Morgan Kaufmann Publishers Inc.,
+  1998.
+
+\bibitem{cortes1995support}
+Corinna Cortes and Vladimir Vapnik.
+\newblock Support-vector networks.
+\newblock {\em Machine learning}, 20(3):273--297, 1995.
+
+\bibitem{gunawardana2009unified}
+Asela Gunawardana and Christopher Meek.
+\newblock A unified approach to building hybrid recommender systems.
+\newblock In {\em Proceedings of the third ACM conference on Recommender
+  systems}, pages 117--124. ACM, 2009.
+
+\bibitem{hamel2010learning}
+Philippe Hamel and Douglas Eck.
+\newblock Learning features from music audio with deep belief networks.
+\newblock In {\em ISMIR}, pages 339--344. Utrecht, The Netherlands, 2010.
+
+\bibitem{herlocker2004evaluating}
+Jonathan~L Herlocker, Joseph~A Konstan, Loren~G Terveen, and John~T Riedl.
+\newblock Evaluating collaborative filtering recommender systems.
+\newblock {\em ACM Transactions on Information Systems (TOIS)}, 22(1):5--53,
+  2004.
+
+\bibitem{hsu2002comparison}
+Chih-Wei Hsu and Chih-Jen Lin.
+\newblock A comparison of methods for multiclass support vector machines.
+\newblock {\em Neural Networks, IEEE Transactions on}, 13(2):415--425, 2002.
+
+\bibitem{hu2008collaborative}
+Yifan Hu, Yehuda Koren, and Chris Volinsky.
+\newblock Collaborative filtering for implicit feedback datasets.
+\newblock In {\em Data Mining, 2008. ICDM'08. Eighth IEEE International
+  Conference on}, pages 263--272. IEEE, 2008.
+
+\bibitem{koller2009probabilistic}
+Daphne Koller and Nir Friedman.
+\newblock {\em Probabilistic graphical models: principles and techniques}.
+\newblock MIT press, 2009.
+
+\bibitem{kwatra2010fast}
+Vivek Kwatra and Mei Han.
+\newblock Fast covariance computation and dimensionality reduction for
+  sub-window features in images.
+\newblock In {\em Computer Vision--ECCV 2010}, pages 156--169. Springer, 2010.
+
+\bibitem{logan2000mel}
+Beth Logan et~al.
+\newblock Mel frequency cepstral coefficients for music modeling.
+\newblock In {\em ISMIR}, 2000.
+
+\bibitem{mackay1998introduction}
+David~JC MacKay.
+\newblock Introduction to gaussian processes.
+\newblock {\em NATO ASI Series F Computer and Systems Sciences}, 168:133--166,
+  1998.
+
+\bibitem{melville2002content}
+Prem Melville, Raymond~J Mooney, and Ramadass Nagarajan.
+\newblock Content-boosted collaborative filtering for improved recommendations.
+\newblock In {\em AAAI/IAAI}, pages 187--192, 2002.
+
+\bibitem{mulaik1987brief}
+Stanley~A Mulaik.
+\newblock A brief history of the philosophical foundations of exploratory
+  factor analysis.
+\newblock {\em Multivariate Behavioral Research}, 22(3):267--305, 1987.
+
+\bibitem{pan1999complexity}
+Victor~Y Pan and Zhao~Q Chen.
+\newblock The complexity of the matrix eigenproblem.
+\newblock In {\em Proceedings of the thirty-first annual ACM symposium on
+  Theory of computing}, pages 507--516. ACM, 1999.
+
+\bibitem{musicGenome}
+Pandora.
+\newblock The music genome project.
+\newblock Available from: \url{http://pandora.com/mgp} [cited 13:th of May
+  2015].
+
+\bibitem{pazzani2007content}
+Michael~J Pazzani and Daniel Billsus.
+\newblock Content-based recommendation systems.
+\newblock In {\em The adaptive web}, pages 325--341. Springer, 2007.
+
+\bibitem{platt2001learning}
+John~C Platt, Christopher~JC Burges, Steven Swenson, Christopher Weare, and
+  Alice Zheng.
+\newblock Learning a gaussian process prior for automatically generating music
+  playlists.
+\newblock In {\em NIPS}, pages 1425--1432, 2001.
+
+\bibitem{ragno2005inferring}
+Robert Ragno, Christopher~JC Burges, and Cormac Herley.
+\newblock Inferring similarity between music objects with application to
+  playlist generation.
+\newblock In {\em Proceedings of the 7th ACM SIGMM international workshop on
+  Multimedia information retrieval}, pages 73--80. ACM, 2005.
+
+\bibitem{rasmussen2004gaussian}
+Carl~Edward Rasmussen.
+\newblock Gaussian processes in machine learning.
+\newblock In {\em Advanced lectures on machine learning}, pages 63--71.
+  Springer, 2004.
+
+\bibitem{rasmussen2006gaussian}
+Carl~Edward Rasmussen.
+\newblock Gaussian processes for machine learning.
+\newblock 2006.
+
+\bibitem{sarwar2001item}
+Badrul Sarwar, George Karypis, Joseph Konstan, and John Riedl.
+\newblock Item-based collaborative filtering recommendation algorithms.
+\newblock In {\em Proceedings of the 10th international conference on World
+  Wide Web}, pages 285--295. ACM, 2001.
+
+\bibitem{su2009survey}
+Xiaoyuan Su and Taghi~M Khoshgoftaar.
+\newblock A survey of collaborative filtering techniques.
+\newblock {\em Advances in artificial intelligence}, 2009:4, 2009.
+
+\bibitem{spotifyPress}
+Spotify~Press Team.
+\newblock Spotify public information.
+\newblock Available from: \url{https://press.spotify.com/se/information/}
+  [cited 2:nd of June 2015].
+
+\bibitem{tzanetakis2002musical}
+George Tzanetakis and Perry Cook.
+\newblock Musical genre classification of audio signals.
+\newblock {\em Speech and Audio Processing, IEEE transactions on},
+  10(5):293--302, 2002.
+
+\end{thebibliography}
