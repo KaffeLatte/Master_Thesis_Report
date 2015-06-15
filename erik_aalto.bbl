@@ -134,6 +134,12 @@ Carl~Edward Rasmussen.
 \newblock Gaussian processes for machine learning.
 \newblock 2006.
 
+\bibitem{rehbein2010there}
+Ines Rehbein and Josef Ruppenhofer.
+\newblock There's no data like more data? revisiting the impact of data size on
+  a classification task.
+\newblock In {\em LREC}, 2010.
+
 \bibitem{sarwar2001item}
 Badrul Sarwar, George Karypis, Joseph Konstan, and John Riedl.
 \newblock Item-based collaborative filtering recommendation algorithms.
