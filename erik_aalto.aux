@@ -98,8 +98,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Data}{18}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Exploratory Data Analysis}{18}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Learning Playlist Characteristics}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualization of covariances in a sample playlist. Zero variance terms have been removed. As can be seen there are linear correlations between features in the playlist data for this particular playlist. The conclusion that can be drawn from this is that there are dependencies between features and that the presence of certain features is related to other features and vice versa. This information is an important factor for modeling the characteristics of the playlist. The symmetry along the diagonal of the figure is due to relationships between features being two way. As can be seen from the geometry in the figure, features that are related are grouped into squares.}}{20}}
-\newlabel{plistCorrs}{{\M@TitleReference {4.1}{Visualization of covariances in a sample playlist. Zero variance terms have been removed. As can be seen there are linear correlations between features in the playlist data for this particular playlist. The conclusion that can be drawn from this is that there are dependencies between features and that the presence of certain features is related to other features and vice versa. This information is an important factor for modeling the characteristics of the playlist. The symmetry along the diagonal of the figure is due to relationships between features being two way. As can be seen from the geometry in the figure, features that are related are grouped into squares.}}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Visualization of covariances in a sample playlist. Zero variance terms have been removed. As can be seen there are linear correlations between features in the playlist data for this particular playlist. The conclusion that can be drawn from this is that there are dependencies between features and that the presence of certain features is related to other features and vice versa. This information is an important factor for modeling the characteristics of the playlist. The symmetry along the diagonal of the figure is due to relationships between features being two way. As can be seen from the geometry in the figure, features that are related are grouped into squares along the diagonal of the image.}}{20}}
+\newlabel{plistCorrs}{{\M@TitleReference {4.1}{Visualization of covariances in a sample playlist. Zero variance terms have been removed. As can be seen there are linear correlations between features in the playlist data for this particular playlist. The conclusion that can be drawn from this is that there are dependencies between features and that the presence of certain features is related to other features and vice versa. This information is an important factor for modeling the characteristics of the playlist. The symmetry along the diagonal of the figure is due to relationships between features being two way. As can be seen from the geometry in the figure, features that are related are grouped into squares along the diagonal of the image.}}{20}}
 \citation{cortes1995support}
 \citation{hsu2002comparison}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Handling zero variance terms}{21}}
@@ -109,25 +109,84 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.6}Playlist Comparison}{24}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.7}Approximate Nearest Neighbours}{25}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Hierarchical clustering of playlists where the aggregated measure of the weighted dot product matrix is taken by the sum of the matrix diagonal. If one looks closely at the diagonal it can be seen that this approach clusters playlists together, in the form of squares around the diagonal. Clusters are mostly in a pairwise manner and are sensible. For example \textit  {Dub on The Breach} and \textit  {Svensk Reggae} are clustered together, as are \textit  {House Workout} and \textit  {Dinner Party}, as well as \textit  {Coffee Table Jazz}, \textit  {Jazz p\~A\IeC {\textyen } Svenska} and \textit  {Late night Jazz}.}}{26}}
+\newlabel{sum}{{\M@TitleReference {4.3}{Hierarchical clustering of playlists where the aggregated measure of the weighted dot product matrix is taken by the sum of the matrix diagonal. If one looks closely at the diagonal it can be seen that this approach clusters playlists together, in the form of squares around the diagonal. Clusters are mostly in a pairwise manner and are sensible. For example \textit  {Dub on The Breach} and \textit  {Svensk Reggae} are clustered together, as are \textit  {House Workout} and \textit  {Dinner Party}, as well as \textit  {Coffee Table Jazz}, \textit  {Jazz p\~A\IeC {\textyen } Svenska} and \textit  {Late night Jazz}.}}{26}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Hierarchical clustering of playlists where the aggregated measure of the weighted dot product matrix is taken by the absolute value of sum of the matrix diagonal. A look at the squares of correlation along the matrix diagonal shows interesting clusters. The three classical rock playlists in the data set are grouped together, three hip hop playlists are grouped into one cluster and so are three reggae playlists, there are two jazz clusters with two songs in each and there is also a workout/party cluster and a modern rock/metal cluster.}}{27}}
+\newlabel{absSum}{{\M@TitleReference {4.4}{Hierarchical clustering of playlists where the aggregated measure of the weighted dot product matrix is taken by the absolute value of sum of the matrix diagonal. A look at the squares of correlation along the matrix diagonal shows interesting clusters. The three classical rock playlists in the data set are grouped together, three hip hop playlists are grouped into one cluster and so are three reggae playlists, there are two jazz clusters with two songs in each and there is also a workout/party cluster and a modern rock/metal cluster.}}{27}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Hierarchical clustering of playlists where the aggregated measure of the weighted dot product matrix is taken by the sum of the absolute values of the matrix diagonal. The clusters along the diagonal using this method are more prominent than using the other methods. The clusters are easier to spot along the diagonal of the picture. The playlist comparison method used for this figure also does not provide several smaller clusters that are similar, such as two jazz clusters or two hip hop clusters as in \ref  {sum} or \ref  {absSum}}}{28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Illustration of Locality Sensitive Hashing}}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces As can be seen the two data sets, if treated like independent data sets, have different location but still share the same principal components. This illustrates that information about location is thrown away by PCA. The information that is preserved is the direction, as the principal components show in which directions the variance in the data reside.}}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Illustration of random subspace projection. The illustration shows a concept that can be thought of as conceptually similar to both locality sensitive hashing and random separating hyperplanes}}{30}}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\@writefile{toc}{\contentsline {chapter}{\chapternumberline {5}Results}{31}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Precision}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces This image shows the clustering used as a base for calculating precision. Clusters consisting of one single playlist were not used for evaluation.}}{32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Images showing how the model, left image, performs compared to the baseline, right image, for precision at 10.}}{33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Images showing how the model, left image, performs compared to the baseline, right image, for precision at 20.}}{33}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Comparing Model to Baseline}{33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Images showing how the model, left image, performs compared to the baseline, right image, for precision at 30.}}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Image showing the averages including data points for precision at 10}}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Image showing the averages including data points for precision at 20}}{35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Image showing the averages including data points for precision at 30}}{35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Image showing the averages including data points for precision at 10 with one outlier removed}}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Image showing the averages including data points for precision at 20 with one outlier removed}}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Image showing the averages including data points for precision at 30 with one outlier removed}}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Confusions}{37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 1 tree in the pre-filtering step.}}{38}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Qualitative Evaluations}{38}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to t
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {5}Results}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Precision}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces This image shows the clustering used as a base for calculating precision. Clusters consisting of one single playlist were not used for evaluation.}}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Images showing how the model, left image, performs compared to the baseline, right image, for precision at 10.}}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Images showing how the model, left image, performs compared to the baseline, right image, for precision at 20.}}{35}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Comparing Model to Baseline}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Images showing how the model, left image, performs compared to the baseline, right image, for precision at 30.}}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Image showing the averages including data points for precision at 10}}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Image showing the averages including data points for precision at 20}}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Image showing the averages including data points for precision at 30}}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Image showing the averages including data points for precision at 10 with one outlier removed}}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Image showing the averages including data points for precision at 20 with one outlier removed}}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Image showing the averages including data points for precision at 30 with one outlier removed}}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Confusions}{39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 1 tree in the pre-filtering step.}}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Qualitative Evaluations}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 3 trees in the pre-filtering step.}}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 5 trees in the pre-filtering step.}}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 10 trees in the pre-filtering step.}}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 20 trees in the pre-filtering step.}}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 30 trees in the pre-filtering step.}}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Image to the left showing a histogram over similarity ranks to the seed playlists, for the playlists to which the false positive samples belong. The figure to the right shows the cumulative distribution of rankings. Both figures show performance for 50 trees in the pre-filtering step.}}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Results from qualitative evaluation for Hip Hop. The image to the left shows the performance of how the tracks in the playlist for qualitative evaluation matches the playlist theme for both the model and the reference playlist. First column shows how well the tracks in the model playlist matches the theme, second column how well the tracks from the model matches the theme with outliers removed. The third and fourth column show the same values for the reference playlist. The image to the right shows the number of outliers found for the playlist from the model or reference respectively. As can be seen the model slightly outperforms the reference. The most probable reason for one person spotting eight outliers in the model is that the user saw one outlier and that was track number eight. Feedback after the qualitative evaluation confirms this.}}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Results from qualitative evaluation for Rock. The image to the left shows the performance of how the tracks in the playlist for qualitative evaluation matches the playlist theme for both the model and the reference playlist. First column shows how well the tracks in the model playlist matches the theme, second column how well the tracks from the model matches the theme with outliers removed. The third and fourth column show the same values for the reference playlist. The image to the right shows the number of outliers found for the playlist from the model or reference respectively. As can be seen the model outperforms the reference. A reasonable explanation to the low performance of the reference could be that experts designing the playlist and the users evaluating the playlist have different opinions about what rock is. Is the song \textit  {Son of a preacher man} that was present among the reference songs old school rock or pop for example.}}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Qualitative results for the Metal playlists. The image to the left shows the performance of how the tracks in the playlist for qualitative evaluation matches the playlist theme for both the model and the reference playlist. First column shows how well the tracks in the model playlist matches the theme, second column how well the tracks from the model matches the theme with outliers removed. The third and fourth column show the same values for the reference playlist. The image to the right shows the number of outliers found for the playlist from the model or reference respectively. As can be seen the reference clearly outperforms the model. As one user misunderstood the outlier scale for Hip Hop it is reasonable to assume that the one person ranking the number of outliers for the metal playlist having commited the same mistake, but as opinions about music differ we cannot be sure about this.}}{46}}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {6}Discussion and Future Work}{47}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Discussion}{47}}
+\citation{kwatra2010fast}
+\citation{pan1999complexity}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Complexity Analysis}{48}}
+\bibdata{refList}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Future Work}{49}}
+\bibcite{adomavicius2005toward}{1}
+\bibcite{bengio2013representation}{2}
+\bibcite{beyer1999nearest}{3}
+\bibcite{breese1998empirical}{4}
+\bibcite{cortes1995support}{5}
+\bibcite{gunawardana2009unified}{6}
+\bibcite{hamel2010learning}{7}
+\bibcite{herlocker2004evaluating}{8}
+\bibcite{hsu2002comparison}{9}
+\bibcite{hu2008collaborative}{10}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{51}}
+\bibcite{koller2009probabilistic}{11}
+\bibcite{kwatra2010fast}{12}
+\bibcite{logan2000mel}{13}
+\bibcite{mackay1998introduction}{14}
+\bibcite{melville2002content}{15}
+\bibcite{mulaik1987brief}{16}
+\bibcite{pan1999complexity}{17}
+\bibcite{musicGenome}{18}
+\bibcite{pazzani2007content}{19}
+\bibcite{platt2001learning}{20}
+\bibcite{ragno2005inferring}{21}
+\bibcite{rasmussen2004gaussian}{22}
+\bibcite{rasmussen2006gaussian}{23}
+\bibcite{rehbein2010there}{24}
+\bibcite{sarwar2001item}{25}
+\bibcite{su2009survey}{26}
+\bibcite{spotifyPress}{27}
+\bibcite{tzanetakis2002musical}{28}
+\bibstyle{plain}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{53}}
+\@writefile{lof}{\addvspace {10pt}}
+\@writefile{lot}{\addvspace {10pt}}
+\@writefile{toc}{\contentsline {appendix}{\chapternumberline {A}RDF}{55}}
+\newlabel{appA}{{\M@TitleReference {A}{RDF}}{55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax \fontsize  {10}{12}\selectfont  \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep \parsepi \topsep \topsepi \itemsep \itemsepi {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Several statements describing the same resource.}}}{55}}
+\newlabel{RDF_4}{{\M@TitleReference {A.1}{\relax \fontsize  {10}{12}\selectfont  \abovedisplayskip 10\p@ plus2\p@ minus5\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6\p@ plus3\p@ minus3\p@ \def \leftmargin \leftmargini \parsep \parsepi \topsep \topsepi \itemsep \itemsepi {\leftmargin \leftmargini \topsep 6\p@ plus2\p@ minus2\p@ \parsep 3\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Several statements describing the same resource.}}}{55}}
+\memsetcounter{lastsheet}{63}
+\memsetcounter{lastpage}{55}

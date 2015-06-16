@@ -26,15 +26,15 @@
 \contentsline {subsection}{\numberline {4.5.1}Subspace method}{22}
 \contentsline {section}{\numberline {4.6}Playlist Comparison}{24}
 \contentsline {section}{\numberline {4.7}Approximate Nearest Neighbours}{25}
-\contentsline {chapter}{\chapternumberline {5}Results}{31}
-\contentsline {section}{\numberline {5.1}Precision}{31}
-\contentsline {section}{\numberline {5.2}Comparing Model to Baseline}{33}
-\contentsline {section}{\numberline {5.3}Confusions}{37}
-\contentsline {section}{\numberline {5.4}Qualitative Evaluations}{38}
-\contentsline {chapter}{\chapternumberline {6}Discussion and Future Work}{45}
-\contentsline {section}{\numberline {6.1}Discussion}{45}
-\contentsline {subsection}{\numberline {6.1.1}Complexity Analysis}{46}
-\contentsline {section}{\numberline {6.2}Future Work}{47}
-\contentsline {chapter}{Bibliography}{49}
-\contentsline {chapter}{Appendices}{51}
-\contentsline {appendix}{\chapternumberline {A}RDF}{53}
+\contentsline {chapter}{\chapternumberline {5}Results}{33}
+\contentsline {section}{\numberline {5.1}Precision}{33}
+\contentsline {section}{\numberline {5.2}Comparing Model to Baseline}{35}
+\contentsline {section}{\numberline {5.3}Confusions}{39}
+\contentsline {section}{\numberline {5.4}Qualitative Evaluations}{40}
+\contentsline {chapter}{\chapternumberline {6}Discussion and Future Work}{47}
+\contentsline {section}{\numberline {6.1}Discussion}{47}
+\contentsline {subsection}{\numberline {6.1.1}Complexity Analysis}{48}
+\contentsline {section}{\numberline {6.2}Future Work}{49}
+\contentsline {chapter}{Bibliography}{51}
+\contentsline {chapter}{Appendices}{53}
+\contentsline {appendix}{\chapternumberline {A}RDF}{55}
