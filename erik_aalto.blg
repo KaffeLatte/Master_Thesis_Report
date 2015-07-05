@@ -4,45 +4,45 @@ The top-level auxiliary file: erik_aalto.aux
 The style file: plain.bst
 Database file #1: refList.bib
 Warning--empty journal in rasmussen2006gaussian
-You've used 28 entries,
+You've used 35 entries,
             2118 wiz_defined-function locations,
-            663 strings with 8700 characters,
-and the built_in function-call counts, 10619 in all, are:
-= -- 1104
-> -- 398
-< -- 13
-+ -- 162
-- -- 128
-* -- 649
-:= -- 1628
-add.period$ -- 95
-call.type$ -- 28
-change.case$ -- 146
+            700 strings with 10051 characters,
+and the built_in function-call counts, 12885 in all, are:
+= -- 1341
+> -- 481
+< -- 16
++ -- 196
+- -- 154
+* -- 760
+:= -- 1983
+add.period$ -- 119
+call.type$ -- 35
+change.case$ -- 181
 chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 462
-empty$ -- 901
-format.name$ -- 128
-if$ -- 2358
+cite$ -- 36
+duplicate$ -- 562
+empty$ -- 1097
+format.name$ -- 154
+if$ -- 2868
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 27
-newline$ -- 143
-num.names$ -- 56
-pop$ -- 190
+int.to.str$ -- 35
+missing$ -- 31
+newline$ -- 178
+num.names$ -- 70
+pop$ -- 240
 preamble$ -- 1
-purify$ -- 119
+purify$ -- 146
 quote$ -- 0
-skip$ -- 351
+skip$ -- 433
 stack$ -- 0
-substring$ -- 746
-swap$ -- 151
-text.length$ -- 13
+substring$ -- 870
+swap$ -- 184
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 110
+type$ -- 138
 warning$ -- 1
-while$ -- 112
-width$ -- 30
-write$ -- 312
+while$ -- 135
+width$ -- 37
+write$ -- 387
 (There was 1 warning)
