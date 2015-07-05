@@ -139,7 +139,8 @@ Earlier attempts of playlist generation has been made by Microsoft Research\cite
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{images/UGM.png}
+%\includegraphics[scale=0.4]{images/UGM.png}
+\includegraphics[width=0.5\textwidth]{images/UGM.png}
 \caption{Illustration of an undirected graph. Here transitions between nodes A and B can be made, transitions can also be made between nodes A and C. No direct transitions between nodes B and C can be made.}
 \end{figure}
 
@@ -149,7 +150,7 @@ In this graph each song will be represented by a node. Each edge in the graph co
   
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{images/DGM.png}
+\includegraphics[width=0.5\textwidth]{images/DGM.png}
 \caption{Illustration of a directed graph. Each edge corresponds to a one way transition. In this graph transitions can be made between nodes A and B both ways, transitions can be made one way from node A to node C but not from C to A. From node C transitions to node B can be made, but no transitions from node B to node A are possible.}
 \end{figure}  
   
@@ -561,7 +562,8 @@ There is a similar behaviour for all number of trees in the approximate nearest 
 Due to the distributions of ranks presented it is reasonable to believe that precision calculated as tracks coming from playlists in the same cluster is a conservative measure and that the actual results are better than what the precision measure reveals.
 
 \section{Qualitative Evaluations}
-To find out if the results from evaluating the rank of playlists from which the confused false positives originated actually means that the tracks selected as candidate songs really are good candidates to a higher extent than what the precision metric reveals and to get an idea of how the selected candidate songs sounded to the human ear qualitative evaluations were performed. Three playlists for which the seed playlists were Old School Hip Hop, Old School Rock and Old School Heavy were selected for qualitative evaluations. The reason for selecting these playlists are that they contributed to uniformity of the test as they all were \textit{"Old School"} and all were genre playlists. Also Hip Hop was seen to precision a high performing playlist, Rock middle performing and Metal low performing so to see how well the performance of the quantitative measures responded to listeners opinions. To have a reference point both playlists with songs selected by the model as well as songs from the original curated playlists were selected. To haven an even distribution of biases from the persons listening to the playlists new playlists were created where ten songs in order came from the top ranked candidate songs by the model and the other ten songs, also in order, were the first ones in the seed playlist. Users were then presented with these three playlists and were asked how well the first or last ten songs matched the theme, how many outliers there were and how well the songs matched the theme with outliers removed.
+To find out if the results from evaluating the rank of playlists from which the confused false positives originated actually means that the tracks selected as candidate songs really are good candidates to a higher extent than what the precision metric reveals and to get an idea of how the selected candidate songs sounded to the human ear qualitative evaluations were performed. Three playlists for which the seed playlists were Old School Hip Hop, Old School Rock and Old School Heavy were selected for qualitative evaluations
+. The reason for selecting these playlists are that they contributed to uniformity of the test as they all were \textit{"Old School"} and all were genre playlists. Also Hip Hop was seen to precision a high performing playlist, Rock middle performing and Metal low performing so to see how well the performance of the quantitative measures responded to listeners opinions. To have a reference point both playlists with songs selected by the model as well as songs from the original curated playlists were selected. To haven an even distribution of biases from the persons listening to the playlists new playlists were created where ten songs in order came from the top ranked candidate songs by the model and the other ten songs, also in order, were the first ones in the seed playlist. Users were then presented with these three playlists and were asked how well the first or last ten songs matched the theme, how many outliers there were and how well the songs matched the theme with outliers removed.
 
 \begin{figure}
 \centering
@@ -615,6 +617,7 @@ The first step in the model is to create a covariance matrix from the features o
 To project each track into the principal component space a matrix vector multiplication is needed with time complexity of $O(D^2)$ and this is done for each track which yields a resulting time complexity of $O(ND^2)$ where \textit{N} are the number of tracks to be projected. The calculation of relative change in magnitude requires calculating the length of each track represented as a vector which includes a squared root operation and thus has the time complexity of $O(D^2)$. Creating a covariance matrix, eigendecompose it and creating a projection matrix does only have to be done once and as the number of tracks in a playlist does not exceed the magnitude of hundreds and the number of dimensions for each track is fixed the steps of the model before projecting tracks can be regarded as constant operations. Using approximate nearest neighbours for one track is a constant time operation and needs to be done for each track in the seed playlist which gives a resulting time complexity of \textit{O(N)} where \textit{N} is the number of tracks in the seed playlist. The resulting complexity of the model thus becomes $O(nD^2)$ where \textit{n} are the number of tracks obtained by using approximate nearest neighbours and \textit{n << N} where \textit{N} is the total number of tracks in the music library. 
 
 The total time complexity for the entire model is $O((n+N)D^2 + D^3)$ where \textit{n} is the number of tracks after the nearest neighbour pre-filtering step, \textit{N} is the number of tracks in the original playlist and \textit{D} is the number of dimensions for our track data. What needs to be noted here is that $O(ND^2 + D^3)$ complexity term only needs to be done once. This yields a resulting run time complexity which is sub-linear in the number of tracks and quadratic in the number of features. What is further interesting is that the projection of tracks into sub-spaces can be done in parallel. 
+\pagebreak
  
 \section{Future Work}
 \textit{So many things to do and so little time} \\\\The Joker\\\\
